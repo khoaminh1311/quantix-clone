@@ -2,111 +2,92 @@ import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import LogoCloud from "./components/LogoCloud"
 import Features from "./components/Features"
-import FeatureShowcase from "./components/FeatureShowcase"
 import Stats from "./components/Stats"
 import Pricing from "./components/Pricing"
 import CTA from "./components/CTA"
 import Footer from "./components/Footer"
 
 function App() {
-    const features = [
-        {
-            title: "Fast Performance",
-            description: "Build and deliver your products faster."
-        },
-        {
-            title: "Secure Platform",
-            description: "Keep your data safe and protected."
-        },
-        {
-            title: "Easy Collaboration",
-            description: "Work together with your team efficiently."
-        }
-    ]
-
     const stats = [
         {
-            value: "10K+",
-            label: "Active users"
+            value: "50M+",
+            label: "Events tracked daily"
         },
         {
             value: "99.9%",
-            label: "Uptime"
+            label: "Uptime SLA"
         },
         {
-            value: "50+",
-            label: "Countries"
+            value: "2,400+",
+            label: "Teams worldwide"
+        },
+        {
+            value: "<50ms",
+            label: "Query response time"
         }
     ]
 
     const logos = [
-        "Company A",
-        "Company B",
-        "Company C",
-        "Company D",
-        "Company E"
+        "Vercel",
+        "Linear",
+        "Raycast",
+        "Resend",
+        "Supabase"
     ]
 
     const plans = [
         {
-            name: "Basic",
-            price: "$9",
-            description: "For individuals and small projects.",
+            name: "Starter",
+            price: "FREE",
+            period: "Free forever",
+            description: "Free forever for side projects & early ideas.",
+            ctaText: "Get Started",
+            popular: false,
             features: [
-                "5 projects",
-                "Basic analytics",
-                "Email support"
+                "Up to 10K events/mo",
+                "1 project",
+                "Core analytics",
+                "Community support"
             ]
         },
         {
             name: "Pro",
-            price: "$29",
-            description: "For growing teams.",
+            price: "$25",
+            period: "per month",
+            description: "For fast-growing products and engineering teams.",
+            ctaText: "Start Free Trial",
+            popular: true,
             features: [
+                "Up to 1M events/mo",
                 "Unlimited projects",
-                "Advanced analytics",
+                "Session replay",
+                "Feature flags & A/B",
                 "Priority support"
             ]
         },
         {
-            name: "Enterprise",
-            price: "$99",
-            description: "For large organizations.",
+            name: "Scale",
+            price: "$120",
+            period: "per month",
+            description: "For high-scale enterprises with custom security.",
+            ctaText: "Contact Sales",
+            popular: false,
             features: [
-                "Everything in Pro",
-                "Custom integrations",
-                "Dedicated support"
+                "Unlimited events",
+                "SSO & SAML",
+                "Custom retention",
+                "Dedicated CSM",
+                "SLA guarantee"
             ]
         }
     ]
 
-    const showcaseFeatures = [
-        {
-            title: "Powerful Analytics",
-            description: "Track your product performance with detailed analytics.",
-            image: "/images/analytics.png"
-        },
-        {
-            title: "Smart Collaboration",
-            description: "Work with your team and manage projects efficiently.",
-            image: "/images/collaboration.png"
-        },
-        {
-            title: "Advanced Security",
-            description: "Protect your data with enterprise-grade security.",
-            image: "/images/security.png"
-        }
-    ]
     return (
         <>
             <Navbar />
-            <Hero
-                title="Build better products"
-                description="Create, manage and grow your business with Quantix."
-            />
+            <Hero />
             <LogoCloud logos={logos} />
-            <Features features={features} />
-            <FeatureShowcase showcaseFeatures={showcaseFeatures} />
+            <Features />
             <Stats stats={stats} />
             <Pricing plans={plans} />
             <CTA />
