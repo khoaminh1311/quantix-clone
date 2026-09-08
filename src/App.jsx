@@ -38,7 +38,8 @@ function App() {
     const plans = [
         {
             name: "Starter",
-            price: "FREE",
+            priceMonthly: "FREE",
+            priceAnnual: "FREE",
             period: "Free forever",
             description: "Free forever for side projects & early ideas.",
             ctaText: "Get Started",
@@ -52,7 +53,8 @@ function App() {
         },
         {
             name: "Pro",
-            price: "$25",
+            priceMonthly: "$25",
+            priceAnnual: "$19",
             period: "per month",
             description: "For fast-growing products and engineering teams.",
             ctaText: "Start Free Trial",
@@ -67,7 +69,8 @@ function App() {
         },
         {
             name: "Scale",
-            price: "$120",
+            priceMonthly: "$120",
+            priceAnnual: "$99",
             period: "per month",
             description: "For high-scale enterprises with custom security.",
             ctaText: "Contact Sales",
