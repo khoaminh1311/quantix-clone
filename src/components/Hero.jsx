@@ -13,7 +13,7 @@ function Hero() {
                             <span className="text-sm font-medium text-quantix-text">Version 2.0 is Live</span>
                         </div>
 
-                        <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-6">
+                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
                             Analytics that<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-quantix-accent to-orange-400">
                                 move the needle
@@ -36,7 +36,7 @@ function Hero() {
 
                         <div className="border-t border-quantix-border pt-8">
                             <p className="text-sm text-quantix-text mb-4">Trusted by 2,400+ teams</p>
-                            <div className="flex flex-wrap gap-x-8 gap-y-4 opacity-70 grayscale">
+                            <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-4 opacity-70 grayscale">
                                 <div className="flex items-center font-bold text-lg">▲ Vercel</div>
                                 <div className="flex items-center font-bold text-lg">Linear</div>
                                 <div className="flex items-center font-bold text-lg">Raycast</div>
@@ -47,7 +47,7 @@ function Hero() {
                     </div>
 
                     {/* Right Mockup */}
-                    <div className="relative">
+                    <div className="relative mt-8 lg:mt-0">
                         <div className="relative rounded-xl border border-quantix-border bg-quantix-card shadow-2xl overflow-hidden">
                             {/* Toolbar */}
                             <div className="flex items-center gap-2 px-4 py-3 border-b border-quantix-border bg-quantix-dark/50">
@@ -57,8 +57,8 @@ function Hero() {
                             </div>
 
                             {/* Mockup Body */}
-                            <div className="p-6">
-                                <div className="grid grid-cols-3 gap-4 mb-8">
+                            <div className="p-4 sm:p-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                                     <div className="p-4 rounded-lg bg-quantix-dark border border-quantix-border">
                                         <div className="text-xs text-quantix-text mb-1">Page Views</div>
                                         <div className="text-2xl font-bold text-quantix-light">24.8K</div>

@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
-import LogoCloud from "./components/LogoCloud"
+// import LogoCloud from "./components/LogoCloud"
 import Features from "./components/Features"
 import Stats from "./components/Stats"
 import Pricing from "./components/Pricing"
@@ -27,6 +27,7 @@ function App() {
         }
     ]
 
+<<<<<<< Updated upstream
     const logos = [
         "Vercel",
         "Linear",
@@ -34,6 +35,15 @@ function App() {
         "Resend",
         "Supabase"
     ]
+=======
+    // const logos = [
+    //     "Vercel",
+    //     "Linear",
+    //     "Raycast",
+    //     "Resend",
+    //     "Supabase"
+    // ]
+>>>>>>> Stashed changes
 
     const plans = [
         {
@@ -85,9 +95,25 @@ function App() {
     return (
         <>
             <Navbar />
+<<<<<<< HEAD
             <Hero />
             <LogoCloud logos={logos} />
             <Features />
+=======
+<<<<<<< Updated upstream
+            <Hero
+                title="Build better products"
+                description="Create, manage and grow your business with Quantix."
+            />
+            <LogoCloud logos={logos} />
+            <Features features={features} />
+            <FeatureShowcase showcaseFeatures={showcaseFeatures} />
+=======
+            <Hero />
+            {/* <LogoCloud logos={logos} /> */}
+            <Features />
+>>>>>>> Stashed changes
+>>>>>>> 2dd00ae (complete responsive design)
             <Stats stats={stats} />
             <Pricing plans={plans} />
             <CTA />
