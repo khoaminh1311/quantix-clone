@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-quantix-dark/80 border-b border-quantix-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          
+
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <a href="#" className="flex items-center gap-2 font-bold text-xl text-quantix-light tracking-tight">
@@ -39,7 +39,7 @@ function Navbar() {
 
           {/* Mobile menu button */}
           <div className="flex md:hidden items-center">
-            <button 
+            <button
               className="text-quantix-text hover:text-quantix-light p-2 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
@@ -51,7 +51,7 @@ function Navbar() {
               )}
             </button>
           </div>
-          
+
         </div>
       </div>
 
@@ -65,7 +65,7 @@ function Navbar() {
               <a href="#" className="text-base font-medium text-quantix-text hover:text-quantix-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Docs</a>
               <a href="#" className="text-base font-medium text-quantix-text hover:text-quantix-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Templates</a>
             </div>
-            
+
             <div className="pt-4 border-t border-quantix-border flex flex-col space-y-4">
               <a href="#" className="text-base font-medium text-quantix-light hover:text-quantix-text transition-colors text-center" onClick={() => setIsMobileMenuOpen(false)}>
                 Log in
