@@ -10,19 +10,25 @@ import Footer from "./components/Footer"
 function App() {
     const stats = [
         {
-            value: "50M+",
+            target: 50,
+            suffix: "M+",
             label: "Events tracked daily"
         },
         {
-            value: "99.9%",
+            target: 99.9,
+            suffix: "%",
+            decimals: 1,
             label: "Uptime SLA"
         },
         {
-            value: "2,400+",
+            target: 2400,
+            suffix: "+",
             label: "Teams worldwide"
         },
         {
-            value: "<50ms",
+            target: 50,
+            prefix: "<",
+            suffix: "ms",
             label: "Query response time"
         }
     ]
