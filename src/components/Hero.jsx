@@ -5,10 +5,10 @@ function Hero() {
     return (
         <section className="pt-24 pb-16 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-16 items-center">
 
                     {/* Left Content */}
-                    <div className="mb-12 lg:mb-0">
+                    <div className="mb-12 lg:mb-0 order-1 lg:col-start-1 lg:row-start-1">
                         <FadeUp delay={100}>
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-quantix-border/50 border border-quantix-border mb-6">
                                 <span className="w-2 h-2 rounded-full bg-quantix-green animate-pulse"></span>
@@ -32,7 +32,7 @@ function Hero() {
                         </FadeUp>
 
                         <FadeUp delay={400}>
-                            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                            <div className="flex flex-col sm:flex-row gap-4 mb-12 lg:mb-0">
                                 <a href="#" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-quantix-accent text-white font-medium hover:bg-red-500 transition-colors">
                                     Get Started Free <ArrowRight className="ml-2 w-4 h-4" />
                                 </a>
@@ -42,23 +42,10 @@ function Hero() {
                                 </a>
                             </div>
                         </FadeUp>
-
-                        <FadeUp delay={500}>
-                            <div className="border-t border-quantix-border pt-8">
-                                <p className="text-sm text-quantix-text mb-4">Trusted by 2,400+ teams</p>
-                                <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-4 opacity-70 grayscale">
-                                    <div className="flex items-center font-bold text-lg">▲ Vercel</div>
-                                    <div className="flex items-center font-bold text-lg">Linear</div>
-                                    <div className="flex items-center font-bold text-lg">Raycast</div>
-                                    <div className="flex items-center font-bold text-lg">Resend</div>
-                                    <div className="flex items-center font-bold text-lg">Supabase</div>
-                                </div>
-                            </div>
-                        </FadeUp>
                     </div>
 
                     {/* Right Mockup */}
-                    <FadeUp delay={300} className="relative mt-8 lg:mt-0">
+                    <FadeUp delay={300} className="relative mt-8 lg:mt-0 order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 w-full">
                         <div className="relative rounded-xl border border-quantix-border bg-quantix-card shadow-2xl overflow-hidden">
                             {/* Toolbar */}
                             <div className="flex items-center gap-2 px-4 py-3 border-b border-quantix-border bg-quantix-dark/50">
@@ -116,6 +103,18 @@ function Hero() {
 
                         {/* Decorative Glow */}
                         <div className="absolute -inset-0.5 bg-gradient-to-tr from-quantix-accent/20 to-orange-400/20 blur-3xl -z-10 rounded-full opacity-50"></div>
+                    </FadeUp>
+
+                    {/* Trusted By */}
+                    <FadeUp delay={500} className="w-full order-3 lg:col-start-1 lg:row-start-2 border-t border-quantix-border pt-12 mt-12 lg:pt-8 lg:mt-0">
+                        <p className="text-sm text-quantix-text mb-4 text-center sm:text-left">Trusted by 2,400+ teams</p>
+                        <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-4 opacity-70 grayscale">
+                            <div className="flex items-center font-bold text-lg">▲ Vercel</div>
+                            <div className="flex items-center font-bold text-lg">Linear</div>
+                            <div className="flex items-center font-bold text-lg">Raycast</div>
+                            <div className="flex items-center font-bold text-lg">Resend</div>
+                            <div className="flex items-center font-bold text-lg">Supabase</div>
+                        </div>
                     </FadeUp>
 
                 </div>

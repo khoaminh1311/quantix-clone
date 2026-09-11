@@ -56,6 +56,10 @@ function Features() {
                 
                 {/* Header */}
                 <FadeUp className="text-center mb-16">
+                    <div className="flex items-center justify-center gap-3 mb-4">
+                        <span className="w-8 h-[2px] bg-quantix-accent"></span>
+                        <span className="text-quantix-accent text-sm font-bold tracking-widest uppercase">Features</span>
+                    </div>
                     <h2 className="text-3xl lg:text-4xl font-bold text-quantix-light mb-4">
                         Everything you need.<br/>Nothing you don't.
                     </h2>

@@ -86,7 +86,7 @@ const plans = [
 function App() {
 
     return (
-        <>
+        <main className="overflow-x-hidden w-full relative min-h-screen flex flex-col">
             <Navbar />
             <Hero />
             <Features />
@@ -94,7 +94,7 @@ function App() {
             <Pricing plans={plans} />
             <CTA />
             <Footer />
-        </>
+        </main>
     )
 }
 

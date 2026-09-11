@@ -13,6 +13,19 @@
   --color-quantix-accent: #ff6b6b;
   --color-quantix-amber: #f59e0b;
   --color-quantix-green: #10b981;
+
+  --animate-fade-in-up: fade-in-up 0.5s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @layer base {
@@ -20,7 +33,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-quantix-dark text-quantix-text antialiased font-sans;
+    @apply bg-quantix-dark text-quantix-text antialiased font-sans overflow-x-hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {

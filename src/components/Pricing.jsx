@@ -10,7 +10,10 @@ function Pricing({ plans }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <FadeUp className="text-center mb-10 md:mb-16">
-                    <p className="text-quantix-accent text-sm font-bold tracking-widest uppercase mb-4">Pricing</p>
+                    <div className="flex items-center justify-center gap-3 mb-4">
+                        <span className="w-8 h-[2px] bg-quantix-accent"></span>
+                        <span className="text-quantix-accent text-sm font-bold tracking-widest uppercase">Pricing</span>
+                    </div>
                     <h2 className="text-3xl lg:text-4xl font-bold text-quantix-light mb-4">
                         Start free. Scale as you grow.
                     </h2>

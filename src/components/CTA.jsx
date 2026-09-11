@@ -13,12 +13,12 @@ function CTA() {
                     <div className="relative z-10 max-w-3xl mx-auto">
                         <FadeUp>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-quantix-light mb-4 sm:mb-6 tracking-tight">
-                                Ready to start building?
+                                Stay in the loop
                             </h2>
                         </FadeUp>
                         <FadeUp delay={100}>
                             <p className="text-base sm:text-lg text-quantix-text mb-8 sm:mb-10">
-                                Join over 2,400+ product teams that use Quantix to build better experiences for their users. Start your 14-day free trial today.
+                                Product updates, engineering insights, and zero spam. Unsubscribe anytime.
                             </p>
                         </FadeUp>
 

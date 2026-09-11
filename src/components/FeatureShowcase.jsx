@@ -7,7 +7,7 @@ function FeatureShowcase({ activeTab }) {
         switch (activeTab) {
             case 'dashboard':
                 return (
-                    <div className="p-4 sm:p-6 lg:p-8 animate-fade-in-up">
+                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up">
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                             <div className="p-4 rounded-lg bg-quantix-card border border-quantix-border/50">
                                 <div className="text-xs text-quantix-text mb-1 uppercase tracking-wider font-semibold">Active Users</div>
@@ -47,7 +47,7 @@ function FeatureShowcase({ activeTab }) {
                 );
             case 'funnels':
                 return (
-                    <div className="p-4 sm:p-6 lg:p-8 animate-fade-in-up">
+                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up">
                         <div className="space-y-4">
                             {[
                                 { step: 'Landing Page', users: '12,480', fill: '100%', drop: '—', color: 'bg-quantix-accent' },
@@ -56,7 +56,7 @@ function FeatureShowcase({ activeTab }) {
                                 { step: 'Onboarding Done', users: '3,670', fill: '29%', drop: '-40%', color: 'bg-yellow-500' },
                                 { step: 'First Action', users: '2,569', fill: '20.5%', drop: '-30%', color: 'bg-quantix-green' },
                             ].map((item, i) => (
-                                <div key={i} className="flex items-center gap-4">
+                                <div key={item.step} className="flex items-center gap-4">
                                     <div className="flex-1">
                                         <div className="flex items-center justify-between text-sm font-medium mb-1.5">
                                             <span className="text-quantix-light">{item.step}</span>
@@ -76,7 +76,7 @@ function FeatureShowcase({ activeTab }) {
                 );
             case 'sdk':
                 return (
-                    <div className="p-4 sm:p-6 lg:p-8 animate-fade-in-up flex flex-col h-full min-w-0">
+                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up flex flex-col h-full min-w-0">
                         <div className="flex-1 min-w-0 w-full p-4 sm:p-5 rounded-lg bg-quantix-dark border border-quantix-border/50 font-mono text-sm overflow-x-auto whitespace-nowrap text-gray-300">
                             <div className="text-quantix-text mb-4">{'// Install: npm i @quantix/sdk'}</div>
                             
@@ -105,7 +105,7 @@ function FeatureShowcase({ activeTab }) {
                 );
             case 'replay':
                 return (
-                    <div className="p-4 sm:p-6 lg:p-8 animate-fade-in-up h-full flex flex-col min-w-0">
+                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up h-full flex flex-col min-w-0">
                         <div className="fv-body flex flex-col h-full gap-4">
                             <div className="replay-ui rounded-lg bg-quantix-dark border border-quantix-border/50 overflow-hidden flex flex-col flex-1 min-h-[250px]">
                                 <div className="replay-header flex items-center justify-between px-4 py-3 border-b border-quantix-border/50 bg-quantix-border text-xs font-medium">
@@ -162,7 +162,7 @@ function FeatureShowcase({ activeTab }) {
                 );
             case 'privacy':
                 return (
-                    <div className="p-4 sm:p-6 lg:p-8 animate-fade-in-up h-full flex flex-col justify-center">
+                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up h-full flex flex-col justify-center">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="p-4 sm:p-5 rounded-lg bg-quantix-card border border-quantix-border/50">
                                 <div className="w-10 h-10 rounded-lg bg-quantix-border/30 flex items-center justify-center mb-4 text-quantix-light">
@@ -216,7 +216,7 @@ function FeatureShowcase({ activeTab }) {
                 </div>
 
                 {/* Dynamic Content */}
-                <div className="flex-1">
+                <div key={activeTab} className="flex-1">
                     {renderContent()}
                 </div>
             </div>
