@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { LayoutDashboard, Filter, Code, PlayCircle, Shield, Check } from 'lucide-react';
 import FeatureShowcase from './FeatureShowcase';
+import FadeUp from './FadeUp';
 
 const tabs = [
     { 
@@ -54,17 +55,17 @@ function Features() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Header */}
-                <div className="text-center mb-16">
+                <FadeUp className="text-center mb-16">
                     <h2 className="text-3xl lg:text-4xl font-bold text-quantix-light mb-4">
                         Everything you need.<br/>Nothing you don't.
                     </h2>
                     <p className="text-lg text-quantix-text max-w-2xl mx-auto">
                         A complete analytics toolkit that replaces five tools in your stack.
                     </p>
-                </div>
+                </FadeUp>
 
                 {/* Top Tabs Navigation (Floating Pill-shaped) */}
-                <div className="flex justify-center mb-16">
+                <FadeUp delay={100} className="flex justify-center mb-16">
                     <div className="inline-flex flex-wrap justify-center items-center gap-1 p-1.5 rounded-full bg-quantix-card/30 backdrop-blur-md border border-quantix-border/50">
                         {tabs.map(tab => {
                             const isActive = activeTab === tab.id;
@@ -83,7 +84,7 @@ function Features() {
                             );
                         })}
                     </div>
-                </div>
+                </FadeUp>
 
                 {/* Bottom Left Content & Bottom Right Mockup */}
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
