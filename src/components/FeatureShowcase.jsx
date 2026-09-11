@@ -105,51 +105,57 @@ function FeatureShowcase({ activeTab }) {
                 );
             case 'replay':
                 return (
-                    <div className="p-6 sm:p-8 animate-fade-in-up">
-                        <div className="rounded-lg bg-[#0d0d12] border border-quantix-border/50 overflow-hidden flex flex-col h-[320px]">
-                            {/* Replay Header */}
-                            <div className="flex items-center justify-between px-4 py-3 border-b border-quantix-border/50 bg-[#1A1A1A]">
-                                <div className="flex items-center gap-2 text-sm text-quantix-light font-medium">
-                                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                                    Recording
+                    <div className="p-6 sm:p-8 animate-fade-in-up h-full flex flex-col">
+                        <div className="fv-body flex flex-col h-full gap-4">
+                            <div className="replay-ui rounded-lg bg-[#0d0d12] border border-quantix-border/50 overflow-hidden flex flex-col flex-1 min-h-[250px]">
+                                <div className="replay-header flex items-center justify-between px-4 py-3 border-b border-quantix-border/50 bg-[#1A1A1A] text-xs font-medium">
+                                    <span className="rh-left flex items-center gap-2 text-quantix-light">
+                                        <span className="live-dot w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Recording
+                                    </span>
+                                    <span className="rh-time text-quantix-text font-mono">02:34 / 05:12</span>
                                 </div>
-                                <div className="text-xs text-quantix-text font-mono">02:34 / 05:12</div>
-                            </div>
-                            
-                            {/* Replay Viewport */}
-                            <div className="flex-1 relative p-8">
-                                <div className="w-full h-full border border-quantix-border/30 rounded bg-quantix-dark/50 p-4 opacity-50 relative overflow-hidden">
-                                    {/* Mock page content */}
-                                    <div className="h-4 w-1/3 bg-quantix-border/50 rounded mb-6"></div>
-                                    <div className="h-24 w-full bg-quantix-border/30 rounded mb-4"></div>
-                                    <div className="grid grid-cols-3 gap-4">
-                                        <div className="h-20 bg-quantix-border/20 rounded"></div>
-                                        <div className="h-20 bg-quantix-border/20 rounded"></div>
-                                        <div className="h-20 bg-quantix-border/20 rounded"></div>
+                                <div className="replay-viewport flex-1 relative p-4 sm:p-6 bg-quantix-dark/30">
+                                    <div className="replay-page w-full h-full border border-quantix-border/30 rounded bg-quantix-dark/80 p-3 opacity-70 flex flex-col gap-2 relative overflow-hidden">
+                                        <div className="rp-nav h-2 w-1/3 bg-quantix-border/50 rounded mb-2"></div>
+                                        <div className="rp-hero-block h-6 w-full bg-quantix-border/30 rounded"></div>
+                                        <div className="rp-hero-block h-6 w-full bg-quantix-border/30 rounded"></div>
+                                        <div className="rp-hero-block h-6 w-3/4 bg-quantix-border/30 rounded"></div>
+                                        <span className="rp-btn-block inline-block h-5 w-20 bg-quantix-accent/50 rounded mt-1"></span>
+                                        <div className="rp-grid grid grid-cols-3 gap-2 mt-3 flex-1">
+                                            <div className="rp-card bg-quantix-border/20 rounded h-full min-h-[40px]"></div>
+                                            <div className="rp-card bg-quantix-border/20 rounded h-full min-h-[40px]"></div>
+                                            <div className="rp-card bg-quantix-border/20 rounded h-full min-h-[40px]"></div>
+                                        </div>
                                     </div>
-                                    
-                                    {/* Mouse cursor trail effect */}
-                                    <div className="absolute top-1/2 left-1/3 w-4 h-4 rounded-full bg-white/20 blur-sm"></div>
-                                    <div className="absolute top-[45%] left-[40%] w-3 h-3 rounded-full bg-white/40 blur-[2px]"></div>
-                                    
-                                    {/* Mouse cursor */}
-                                    <div className="absolute top-[40%] left-1/2 z-10 drop-shadow-md">
+                                    <div className="replay-cursor absolute top-1/2 left-1/2 z-10 drop-shadow-md transform -translate-x-1/2 -translate-y-1/2">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.5 3.21V20.8C5.5 21.46 6.27 21.82 6.77 21.4L11.4 17H18.5C19.05 17 19.5 16.55 19.5 16V4C19.5 3.45 19.05 3 18.5 3H6.5C5.95 3 5.5 3.45 5.5 4V3.21Z" fill="white"/>
                                             <path d="M5.5 3.21V20.8C5.5 21.46 6.27 21.82 6.77 21.4L11.4 17H18.5C19.05 17 19.5 16.55 19.5 16V4C19.5 3.45 19.05 3 18.5 3H6.5C5.95 3 5.5 3.45 5.5 4" stroke="black" strokeWidth="1.5"/>
                                         </svg>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            {/* Replay Timeline */}
-                            <div className="h-12 border-t border-quantix-border/50 bg-quantix-card flex items-center px-4 gap-4">
-                                <button className="w-6 h-6 flex items-center justify-center rounded-full bg-quantix-accent text-white pl-0.5">
-                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                                </button>
-                                <div className="flex-1 h-1.5 bg-quantix-border rounded-full relative">
-                                    <div className="absolute top-0 left-0 bottom-0 w-1/2 bg-quantix-accent rounded-full"></div>
+                                <div className="replay-timeline h-10 border-t border-quantix-border/50 bg-quantix-card flex items-center px-4 gap-3">
+                                    <span className="rt-play w-6 h-6 flex items-center justify-center rounded-full bg-quantix-accent text-white pl-0.5">
+                                        <svg width="8" height="8" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                    </span>
+                                    <div className="rt-track flex-1 h-1.5 bg-quantix-border rounded-full relative overflow-hidden">
+                                        <div className="rt-progress absolute top-0 left-0 bottom-0 w-1/2 bg-quantix-accent rounded-full"></div>
+                                    </div>
                                 </div>
+                            </div>
+                            <div className="replay-events flex items-center flex-wrap gap-2">
+                                <span className="replay-event-tag flex items-center gap-1.5 px-2 py-1 rounded border border-quantix-border bg-quantix-card text-[10px] text-quantix-text uppercase tracking-wider font-semibold">
+                                    <span className="re-dot w-1.5 h-1.5 rounded-full bg-quantix-accent"></span> click
+                                </span>
+                                <span className="replay-event-tag flex items-center gap-1.5 px-2 py-1 rounded border border-quantix-border bg-quantix-card text-[10px] text-quantix-text uppercase tracking-wider font-semibold">
+                                    <span className="re-dot w-1.5 h-1.5 rounded-full bg-yellow-500"></span> scroll
+                                </span>
+                                <span className="replay-event-tag flex items-center gap-1.5 px-2 py-1 rounded border border-quantix-border bg-quantix-card text-[10px] text-quantix-text uppercase tracking-wider font-semibold">
+                                    <span className="re-dot w-1.5 h-1.5 rounded-full bg-rose-500"></span> rage_click
+                                </span>
+                                <span className="replay-event-tag flex items-center gap-1.5 px-2 py-1 rounded border border-quantix-border bg-quantix-card text-[10px] text-quantix-text uppercase tracking-wider font-semibold">
+                                    <span className="re-dot w-1.5 h-1.5 rounded-full bg-green-500"></span> input
+                                </span>
                             </div>
                         </div>
                     </div>
