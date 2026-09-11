@@ -73,7 +73,7 @@ function Features() {
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTab(tab.id)}
-                                    className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-all ${
+                                    className={`px-3 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                                         isActive 
                                         ? 'bg-quantix-accent text-white shadow-md shadow-quantix-accent/20' 
                                         : 'text-quantix-text hover:text-quantix-light hover:bg-quantix-card/50'
@@ -87,10 +87,10 @@ function Features() {
                 </FadeUp>
 
                 {/* Bottom Left Content & Bottom Right Mockup */}
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                     
                     {/* Bottom Left: Tab Content */}
-                    <div className="flex flex-col gap-6 order-2 lg:order-1 animate-fade-in-up" key={`content-${activeTab}`}>
+                    <div className="flex flex-col gap-6 animate-fade-in-up" key={`content-${activeTab}`}>
                         <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-quantix-accent/10 text-quantix-accent mb-2">
                             {currentTabData && <currentTabData.icon className="w-6 h-6" />}
                         </div>
@@ -114,7 +114,7 @@ function Features() {
                     </div>
 
                     {/* Bottom Right: Mockup */}
-                    <div className="order-1 lg:order-2">
+                    <div>
                         <FeatureShowcase activeTab={activeTab} />
                     </div>
 

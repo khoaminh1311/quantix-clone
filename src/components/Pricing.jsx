@@ -9,7 +9,7 @@ function Pricing({ plans }) {
         <section className="py-20 bg-quantix-dark" id="pricing">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <FadeUp className="text-center mb-16">
+                <FadeUp className="text-center mb-10 md:mb-16">
                     <p className="text-quantix-accent text-sm font-bold tracking-widest uppercase mb-4">Pricing</p>
                     <h2 className="text-3xl lg:text-4xl font-bold text-quantix-light mb-4">
                         Start free. Scale as you grow.
@@ -20,7 +20,7 @@ function Pricing({ plans }) {
                 </FadeUp>
 
                 {/* Toggle */}
-                <FadeUp delay={100} className="flex items-center justify-center gap-4 mb-16">
+                <FadeUp delay={100} className="flex items-center justify-center gap-4 mb-10 md:mb-16">
                     <span className={`font-medium transition-colors ${!isAnnual ? 'text-quantix-light' : 'text-quantix-text'}`}>
                         Monthly
                     </span>
