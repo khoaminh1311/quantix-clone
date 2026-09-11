@@ -5,9 +5,9 @@
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --color-quantix-dark: #0a0a0c;
-  --color-quantix-card: #141418;
-  --color-quantix-border: #1e1e24;
+  --color-quantix-dark: #1E1E24;
+  --color-quantix-card: #26262D;
+  --color-quantix-border: #36363F;
   --color-quantix-light: #ffffff;
   --color-quantix-text: #a1a1aa; /* zinc-400 equivalent for standard text */
   --color-quantix-accent: #ff6b6b;

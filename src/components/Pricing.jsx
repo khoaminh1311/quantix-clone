@@ -48,7 +48,7 @@ function Pricing({ plans }) {
                                 <div
                                     className={`relative p-6 sm:p-8 rounded-2xl border transition-all duration-300 h-full ${plan.popular
                                         ? 'bg-quantix-card border-quantix-accent shadow-[0_0_30px_rgba(255,107,107,0.15)] md:-mt-4 md:mb-4'
-                                        : 'bg-[#1a1a20] border-quantix-border/50 hover:border-quantix-border'
+                                        : 'bg-quantix-dark border-quantix-border/50 hover:border-quantix-border'
                                         }`}
                                 >
                                     {plan.popular && (

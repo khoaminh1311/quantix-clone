@@ -77,7 +77,7 @@ function FeatureShowcase({ activeTab }) {
             case 'sdk':
                 return (
                     <div className="p-4 sm:p-6 lg:p-8 animate-fade-in-up flex flex-col h-full min-w-0">
-                        <div className="flex-1 min-w-0 w-full p-4 sm:p-5 rounded-lg bg-[#0d0d12] border border-quantix-border/50 font-mono text-sm overflow-x-auto whitespace-nowrap text-gray-300">
+                        <div className="flex-1 min-w-0 w-full p-4 sm:p-5 rounded-lg bg-quantix-dark border border-quantix-border/50 font-mono text-sm overflow-x-auto whitespace-nowrap text-gray-300">
                             <div className="text-quantix-text mb-4">{'// Install: npm i @quantix/sdk'}</div>
                             
                             <div><span className="text-pink-400">import</span> {'{ Quantix }'} <span className="text-pink-400">from</span> <span className="text-yellow-300">'@quantix/sdk'</span></div>
@@ -107,8 +107,8 @@ function FeatureShowcase({ activeTab }) {
                 return (
                     <div className="p-4 sm:p-6 lg:p-8 animate-fade-in-up h-full flex flex-col min-w-0">
                         <div className="fv-body flex flex-col h-full gap-4">
-                            <div className="replay-ui rounded-lg bg-[#0d0d12] border border-quantix-border/50 overflow-hidden flex flex-col flex-1 min-h-[250px]">
-                                <div className="replay-header flex items-center justify-between px-4 py-3 border-b border-quantix-border/50 bg-[#1A1A1A] text-xs font-medium">
+                            <div className="replay-ui rounded-lg bg-quantix-dark border border-quantix-border/50 overflow-hidden flex flex-col flex-1 min-h-[250px]">
+                                <div className="replay-header flex items-center justify-between px-4 py-3 border-b border-quantix-border/50 bg-quantix-border text-xs font-medium">
                                     <span className="rh-left flex items-center gap-2 text-quantix-light">
                                         <span className="live-dot w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Recording
                                     </span>
@@ -207,7 +207,7 @@ function FeatureShowcase({ activeTab }) {
 
             <div className="rounded-xl border border-quantix-border/50 bg-quantix-dark overflow-hidden relative z-10 h-full flex flex-col">
                 {/* Browser/App Header */}
-                <div className="flex items-center px-4 py-3 border-b border-quantix-border/50 bg-[#1A1A1A]">
+                <div className="flex items-center px-4 py-3 border-b border-quantix-border/50 bg-quantix-border">
                     <div className="flex gap-2">
                         <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
                         <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
