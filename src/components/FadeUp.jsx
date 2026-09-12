@@ -5,11 +5,12 @@ function FadeUp({ children, className = '', delay = 0 }) {
     const domRef = useRef();
 
     useEffect(() => {
+        let timeoutId;
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     if (delay > 0) {
-                        setTimeout(() => setIsVisible(true), delay);
+                        timeoutId = setTimeout(() => setIsVisible(true), delay);
                     } else {
                         setIsVisible(true);
                     }
@@ -29,6 +30,9 @@ function FadeUp({ children, className = '', delay = 0 }) {
         }
 
         return () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
             if (currentRef) {
                 observer.unobserve(currentRef);
             }

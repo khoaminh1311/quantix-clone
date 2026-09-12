@@ -6,7 +6,7 @@ function Pricing({ plans }) {
     const [isAnnual, setIsAnnual] = useState(false);
 
     return (
-        <section className="py-20 bg-quantix-dark" id="pricing">
+        <section className="py-20 bg-quantix-dark scroll-mt-20 sm:scroll-mt-24" id="pricing">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <FadeUp className="text-center mb-10 md:mb-16">
@@ -44,95 +44,79 @@ function Pricing({ plans }) {
                 </FadeUp>
 
                 {/* Pricing Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto items-stretch">
                     {plans.map((plan, index) => {
                         return (
-                            <FadeUp key={plan.name} delay={200 + index * 100}>
+                            <FadeUp key={plan.name} delay={200 + index * 100} className="h-full">
                                 <div
-                                    className={`relative p-6 sm:p-8 rounded-2xl border transition-all duration-300 h-full ${plan.popular
-                                        ? 'bg-quantix-card border-quantix-accent shadow-[0_0_30px_rgba(255,107,107,0.15)] md:-mt-4 md:mb-4'
-                                        : 'bg-quantix-dark border-quantix-border/50 hover:border-quantix-border'
-                                        }`}
+                                    className={`relative rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
+                                        plan.popular
+                                            ? 'p-8 md:px-8 md:py-12 md:-my-4 md:h-[calc(100%+2rem)] bg-[#24242B] border-quantix-accent/70 shadow-[0_0_40px_rgba(255,107,107,0.18)] z-10'
+                                            : 'p-8 h-full bg-[#1E1E24] border-quantix-border/40 hover:border-quantix-border'
+                                    }`}
                                 >
                                     {plan.popular && (
-                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                            <span className="bg-quantix-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
+                                            <span className="bg-quantix-accent text-white text-[11px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-[0_0_15px_rgba(255,107,107,0.5)] whitespace-nowrap">
                                                 Most Popular
                                             </span>
                                         </div>
                                     )}
 
-                                    <h3 className="text-xl font-bold text-quantix-light mb-4">{plan.name}</h3>
+                                    {/* Top Part: Title, Price, Subtitle, CTA Button */}
+                                    <div>
+                                        {/* Title */}
+                                        <div className="h-7 mb-4 flex items-center">
+                                            <h3 className="text-xl font-semibold text-quantix-light tracking-wide">{plan.name}</h3>
+                                        </div>
 
-                                    {/* Main Price */}
-                                    <div className="relative h-10 mb-2">
-                                        {plan.name === 'Starter' ? (
-                                            <div className="absolute top-0 left-0 flex items-baseline gap-2 w-full opacity-100 translate-y-0">
-                                                <span className="text-3xl sm:text-4xl font-extrabold text-quantix-light">
+                                        {/* Main Price */}
+                                        <div className="h-12 mb-2 flex items-baseline">
+                                            {plan.name === 'Starter' ? (
+                                                <span className="text-4xl sm:text-5xl font-extrabold text-quantix-light tracking-tight">
                                                     {plan.priceMonthly}
                                                 </span>
-                                            </div>
-                                        ) : (
-                                            <>
-                                                <div className={`absolute top-0 left-0 flex items-baseline gap-2 w-full transition-all duration-300 ease-in-out ${!isAnnual ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[10px] pointer-events-none'}`}>
-                                                    <span className="text-2xl font-bold text-quantix-text">$</span>
-                                                    <span className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-quantix-light">
-                                                        {plan.priceMonthly}
+                                            ) : (
+                                                <div className="flex items-baseline">
+                                                    <span className="text-2xl font-bold text-quantix-text mr-1">$</span>
+                                                    <span className="text-4xl sm:text-5xl font-extrabold text-quantix-light tracking-tight">
+                                                        {isAnnual ? plan.priceAnnual : plan.priceMonthly}
                                                     </span>
                                                 </div>
-                                                <div className={`absolute top-0 left-0 flex items-baseline gap-2 w-full transition-all duration-300 ease-in-out ${isAnnual ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[10px] pointer-events-none'}`}>
-                                                    <span className="text-2xl font-bold text-quantix-text">$</span>
-                                                    <span className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-quantix-light">
-                                                        {plan.priceAnnual}
-                                                    </span>
-                                                </div>
-                                            </>
-                                        )}
+                                            )}
+                                        </div>
+
+                                        {/* Sub Price */}
+                                        <div className="h-6 mb-8 flex items-center text-sm font-medium text-quantix-text">
+                                            {plan.name === 'Starter' ? (
+                                                <span>{plan.period}</span>
+                                            ) : isAnnual && plan.annualTotal ? (
+                                                <span>
+                                                    per month <span className="text-quantix-text">(${plan.annualTotal} per year)</span>
+                                                </span>
+                                            ) : (
+                                                <span>per month</span>
+                                            )}
+                                        </div>
+
+                                        {/* CTA Button */}
+                                        <button
+                                            className={`w-full py-3.5 px-4 rounded-xl font-semibold mb-8 transition-all duration-200 text-sm ${
+                                                plan.popular
+                                                    ? 'bg-quantix-accent text-white hover:bg-red-500 shadow-[0_0_20px_rgba(255,107,107,0.35)]'
+                                                    : 'bg-[#26262D] border border-quantix-border/70 text-quantix-light hover:bg-quantix-border/50'
+                                            }`}
+                                        >
+                                            {plan.ctaText}
+                                        </button>
                                     </div>
 
-                                    {/* Sub Price */}
-                                    <div className="relative h-5 mb-6">
-                                        {plan.name === 'Starter' ? (
-                                            <p className="absolute top-0 left-0 text-sm font-medium w-full opacity-100 translate-y-0">
-                                                <span className="text-quantix-text">{plan.period}</span>
-                                            </p>
-                                        ) : (
-                                            <>
-                                                <p className={`absolute top-0 left-0 text-sm font-medium w-full transition-all duration-300 ease-in-out ${!isAnnual ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[10px] pointer-events-none'}`}>
-                                                    <span className="text-quantix-text">{plan.period}</span>
-                                                </p>
-                                                <p className={`absolute top-0 left-0 text-sm font-medium w-full transition-all duration-300 ease-in-out ${isAnnual ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[10px] pointer-events-none'}`}>
-                                                    {plan.annualTotal ? (
-                                                        <>
-                                                            <span className="text-quantix-text">{plan.period}</span>{' '}
-                                                            <span className="text-quantix-light">(${plan.annualTotal} per year)</span>
-                                                        </>
-                                                    ) : (
-                                                        <span className="text-quantix-text">{plan.period}</span>
-                                                    )}
-                                                </p>
-                                            </>
-                                        )}
-                                    </div>
-
-                                    <p className="text-quantix-text text-sm mb-8 h-10">
-                                        {plan.description}
-                                    </p>
-
-                                    <button className={`w-full py-3 px-4 rounded-lg font-semibold mb-8 transition-colors ${plan.popular
-                                        ? 'bg-quantix-accent text-white hover:bg-red-500 shadow-md'
-                                        : 'bg-quantix-card border border-quantix-border text-quantix-light hover:bg-quantix-border/80'
-                                        }`}>
-                                        {plan.ctaText}
-                                    </button>
-
-                                    <div className="h-px w-full bg-quantix-border/50 mb-8"></div>
-
+                                    {/* Features List */}
                                     <ul className="space-y-4">
                                         {plan.features.map((feature) => (
-                                            <li key={feature} className="flex items-start gap-3">
-                                                <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-quantix-accent' : 'text-quantix-text'}`} />
-                                                <span className="text-quantix-light text-sm">{feature}</span>
+                                            <li key={feature} className="flex items-center gap-3">
+                                                <Check className="w-4 h-4 shrink-0 text-quantix-accent" />
+                                                <span className="text-quantix-text text-sm font-normal">{feature}</span>
                                             </li>
                                         ))}
                                     </ul>

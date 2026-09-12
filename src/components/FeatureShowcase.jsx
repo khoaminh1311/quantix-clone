@@ -8,21 +8,21 @@ function FeatureShowcase({ activeTab }) {
             case 'dashboard':
                 return (
                     <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up">
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                            <div className="p-4 rounded-lg bg-quantix-card border border-quantix-border/50">
-                                <div className="text-xs text-quantix-text mb-1 uppercase tracking-wider font-semibold">Active Users</div>
-                                <div className="text-2xl sm:text-3xl font-bold text-quantix-light mb-1">3,842</div>
-                                <div className="text-xs text-quantix-green font-medium">+12.3%</div>
+                        <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8">
+                            <div className="p-2.5 sm:p-4 rounded-lg bg-quantix-card border border-quantix-border/50 min-w-0">
+                                <div className="text-[9px] sm:text-xs text-quantix-text mb-0.5 sm:mb-1 uppercase tracking-wider font-semibold truncate">Active Users</div>
+                                <div className="text-sm sm:text-2xl lg:text-3xl font-bold text-quantix-light mb-0.5 sm:mb-1 truncate">3,842</div>
+                                <div className="text-[10px] sm:text-xs text-quantix-green font-medium">+12.3%</div>
                             </div>
-                            <div className="p-4 rounded-lg bg-quantix-card border border-quantix-border/50">
-                                <div className="text-xs text-quantix-text mb-1 uppercase tracking-wider font-semibold">Conversion</div>
-                                <div className="text-2xl sm:text-3xl font-bold text-quantix-light mb-1">12.4%</div>
-                                <div className="text-xs text-quantix-green font-medium">+2.1%</div>
+                            <div className="p-2.5 sm:p-4 rounded-lg bg-quantix-card border border-quantix-border/50 min-w-0">
+                                <div className="text-[9px] sm:text-xs text-quantix-text mb-0.5 sm:mb-1 uppercase tracking-wider font-semibold truncate">Conversion</div>
+                                <div className="text-sm sm:text-2xl lg:text-3xl font-bold text-quantix-light mb-0.5 sm:mb-1 truncate">12.4%</div>
+                                <div className="text-[10px] sm:text-xs text-quantix-green font-medium">+2.1%</div>
                             </div>
-                            <div className="p-4 rounded-lg bg-quantix-card border border-quantix-border/50">
-                                <div className="text-xs text-quantix-text mb-1 uppercase tracking-wider font-semibold">Churn</div>
-                                <div className="text-2xl sm:text-3xl font-bold text-quantix-light mb-1">1.8%</div>
-                                <div className="text-xs text-red-400 font-medium">-0.4%</div>
+                            <div className="p-2.5 sm:p-4 rounded-lg bg-quantix-card border border-quantix-border/50 min-w-0">
+                                <div className="text-[9px] sm:text-xs text-quantix-text mb-0.5 sm:mb-1 uppercase tracking-wider font-semibold truncate">Churn</div>
+                                <div className="text-sm sm:text-2xl lg:text-3xl font-bold text-quantix-light mb-0.5 sm:mb-1 truncate">1.8%</div>
+                                <div className="text-[10px] sm:text-xs text-red-400 font-medium">-0.4%</div>
                             </div>
                         </div>
 
@@ -55,7 +55,7 @@ function FeatureShowcase({ activeTab }) {
                                 { step: 'Email Verified', users: '6,115', fill: '49%', drop: '-30%', color: 'bg-yellow-500' },
                                 { step: 'Onboarding Done', users: '3,670', fill: '29%', drop: '-40%', color: 'bg-yellow-500' },
                                 { step: 'First Action', users: '2,569', fill: '20.5%', drop: '-30%', color: 'bg-quantix-green' },
-                            ].map((item, i) => (
+                            ].map((item) => (
                                 <div key={item.step} className="flex items-center gap-4">
                                     <div className="flex-1">
                                         <div className="flex items-center justify-between text-sm font-medium mb-1.5">

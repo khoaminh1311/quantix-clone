@@ -51,11 +51,11 @@ function Features() {
     const currentTabData = tabs.find(t => t.id === activeTab);
 
     return (
-        <section className="py-24 bg-quantix-dark" id="features">
+        <section className="pt-8 sm:pt-12 pb-20 sm:pb-24 bg-quantix-dark scroll-mt-20 sm:scroll-mt-24" id="features">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Header */}
-                <FadeUp className="text-center mb-16">
+                <FadeUp className="text-center mb-10 sm:mb-14">
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <span className="w-8 h-[2px] bg-quantix-accent"></span>
                         <span className="text-quantix-accent text-sm font-bold tracking-widest uppercase">Features</span>
@@ -69,15 +69,15 @@ function Features() {
                 </FadeUp>
 
                 {/* Top Tabs Navigation (Floating Pill-shaped) */}
-                <FadeUp delay={100} className="flex justify-center mb-16">
-                    <div className="inline-flex flex-wrap justify-center items-center gap-1 p-1.5 rounded-full bg-quantix-card/30 backdrop-blur-md border border-quantix-border/50">
+                <FadeUp delay={100} className="flex justify-center mb-12 sm:mb-16">
+                    <div className="inline-flex items-center gap-0.5 sm:gap-1 p-1 sm:p-1.5 rounded-full bg-quantix-card/40 backdrop-blur-md border border-quantix-border/50 max-w-full overflow-x-auto no-scrollbar">
                         {tabs.map(tab => {
                             const isActive = activeTab === tab.id;
                             return (
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTab(tab.id)}
-                                    className={`px-3 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
+                                    className={`px-2.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap shrink-0 ${
                                         isActive 
                                         ? 'bg-quantix-accent text-white shadow-md shadow-quantix-accent/20' 
                                         : 'text-quantix-text hover:text-quantix-light hover:bg-quantix-card/50'

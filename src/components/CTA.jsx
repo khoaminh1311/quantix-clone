@@ -1,14 +1,13 @@
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import FadeUp from './FadeUp';
 
 function CTA() {
     return (
         <section className="py-24 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="bg-quantix-dark border border-quantix-border rounded-3xl p-6 sm:p-8 lg:p-16 text-center relative overflow-hidden shadow-2xl">
+                <div className="bg-quantix-dark border-0 rounded-3xl p-6 sm:p-8 lg:p-16 text-center relative overflow-hidden">
 
-                    {/* Decorative Background Elements */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-quantix-accent/15 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
+                    {/* Removed Decorative Background Elements to match main background */}
 
                     <div className="relative z-10 max-w-3xl mx-auto">
                         <FadeUp>
@@ -24,9 +23,13 @@ function CTA() {
 
                         <FadeUp delay={200}>
                             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-8" onSubmit={(e) => e.preventDefault()}>
+                                <label htmlFor="email" className="sr-only">Email address</label>
                                 <input
+                                    id="email"
+                                    name="email"
                                     type="email"
-                                    placeholder="Enter your work email"
+                                    autoComplete="email"
+                                    placeholder="you@company.com"
                                     className="flex-1 bg-black/20 border border-quantix-border rounded-lg px-4 py-3 text-quantix-light placeholder-quantix-text/50 focus:outline-none focus:border-quantix-accent focus:ring-1 focus:ring-quantix-accent transition-all"
                                     required
                                 />
@@ -34,7 +37,7 @@ function CTA() {
                                     type="submit"
                                     className="inline-flex items-center justify-center px-6 py-3 bg-quantix-accent hover:bg-red-500 text-white font-medium rounded-lg transition-colors whitespace-nowrap"
                                 >
-                                    Get Started <ArrowRight className="ml-2 w-4 h-4" />
+                                    Subscribe <ArrowRight className="ml-2 w-4 h-4" />
                                 </button>
                             </form>
                         </FadeUp>
@@ -42,16 +45,16 @@ function CTA() {
                         <FadeUp delay={300}>
                             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-quantix-text">
                                 <div className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-quantix-green" />
-                                    <span>14-day free trial</span>
+                                    <Check className="w-4 h-4 text-quantix-accent" />
+                                    <span>6,200+ subscribers</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-quantix-green" />
-                                    <span>No credit card required</span>
+                                    <Check className="w-4 h-4 text-quantix-accent" />
+                                    <span>Monthly digest</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-quantix-green" />
-                                    <span>Cancel anytime</span>
+                                    <Check className="w-4 h-4 text-quantix-accent" />
+                                    <span>Unsubscribe anytime</span>
                                 </div>
                             </div>
                         </FadeUp>

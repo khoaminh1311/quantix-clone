@@ -86,15 +86,17 @@ const plans = [
 function App() {
 
     return (
-        <main className="overflow-x-hidden w-full relative min-h-screen flex flex-col">
+        <div className="overflow-x-clip w-full relative min-h-screen flex flex-col">
             <Navbar />
-            <Hero />
-            <Features />
-            <Stats stats={stats} />
-            <Pricing plans={plans} />
-            <CTA />
+            <main className="flex-1 w-full flex flex-col">
+                <Hero />
+                <Features />
+                <Stats stats={stats} />
+                <Pricing plans={plans} />
+                <CTA />
+            </main>
             <Footer />
-        </main>
+        </div>
     )
 }
 

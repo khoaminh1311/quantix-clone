@@ -33,7 +33,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-quantix-dark text-quantix-text antialiased font-sans overflow-x-hidden;
+    @apply bg-quantix-dark text-quantix-text antialiased font-sans overflow-x-clip;
   }
 
   h1, h2, h3, h4, h5, h6 {

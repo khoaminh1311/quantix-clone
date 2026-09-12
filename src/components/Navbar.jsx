@@ -20,7 +20,7 @@ function Navbar() {
           </div>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-5 lg:space-x-8">
             <a href="#features" className="text-sm font-medium text-quantix-text hover:text-quantix-light transition-colors">Features</a>
             <a href="#pricing" className="text-sm font-medium text-quantix-text hover:text-quantix-light transition-colors">Pricing</a>
             <a href="#" className="text-sm font-medium text-quantix-text hover:text-quantix-light transition-colors">Docs</a>
@@ -28,7 +28,7 @@ function Navbar() {
           </div>
 
           {/* Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
             <a href="#" className="text-sm font-medium text-quantix-light hover:text-quantix-text transition-colors">
               Log in
             </a>
@@ -55,12 +55,22 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Backdrop */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 top-16 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile Menu Slide-out */}
       <div
-        className={`md:hidden absolute top-full right-0 w-1/2 sm:w-80 h-[calc(100vh-4rem)] bg-quantix-dark/95 backdrop-blur-md border-l border-t border-quantix-border shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
-          }`}
+        className={`md:hidden fixed top-16 right-0 w-3/4 max-w-xs h-[calc(100vh-4rem)] bg-quantix-dark/95 backdrop-blur-xl border-l border-quantix-border shadow-2xl transition-all duration-300 ease-in-out z-50 ${
+          isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+        }`}
       >
-        <div className="px-4 pt-4 pb-6 space-y-4 overflow-y-auto h-full">
+        <div className="px-5 pt-5 pb-6 space-y-5 overflow-y-auto h-full">
           <div className="flex flex-col space-y-4">
             <a href="#features" className="text-base font-medium text-quantix-text hover:text-quantix-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Features</a>
             <a href="#pricing" className="text-base font-medium text-quantix-text hover:text-quantix-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Pricing</a>
@@ -68,8 +78,8 @@ function Navbar() {
             <a href="#" className="text-base font-medium text-quantix-text hover:text-quantix-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Templates</a>
           </div>
 
-          <div className="pt-4 border-t border-quantix-border flex flex-col space-y-4">
-            <a href="#" className="text-base font-medium text-quantix-light hover:text-quantix-text transition-colors text-center" onClick={() => setIsMobileMenuOpen(false)}>
+          <div className="pt-5 border-t border-quantix-border flex flex-col space-y-4">
+            <a href="#" className="text-base font-medium text-quantix-light hover:text-quantix-text transition-colors text-center py-2" onClick={() => setIsMobileMenuOpen(false)}>
               Log in
             </a>
             <a href="#" className="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-quantix-accent hover:bg-red-500 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
@@ -79,7 +89,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

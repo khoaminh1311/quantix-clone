@@ -4,27 +4,27 @@ function Footer() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Hàng chứa các liên kết điều hướng */}
-                <div className="flex flex-wrap justify-center items-center gap-4 mb-10 text-quantix-text">
+                <div className="flex flex-wrap justify-center items-center gap-x-4 sm:gap-x-6 gap-y-2.5 mb-8 sm:mb-10 text-sm sm:text-base text-quantix-text">
                     <a href="#features" className="hover:text-quantix-light transition-colors font-medium">Features</a>
-                    <span className="w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
+                    <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
                     <a href="#pricing" className="hover:text-quantix-light transition-colors font-medium">Pricing</a>
-                    <span className="w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
+                    <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
                     <a href="#" className="hover:text-quantix-light transition-colors font-medium" onClick={(e) => e.preventDefault()}>Documentation</a>
-                    <span className="w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
+                    <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
                     <a href="#" className="hover:text-quantix-light transition-colors font-medium" onClick={(e) => e.preventDefault()}>Blog</a>
-                    <span className="w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
+                    <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
                     <a href="#" className="hover:text-quantix-light transition-colors font-medium" onClick={(e) => e.preventDefault()}>Partners</a>
                 </div>
 
                 {/* Hàng chân trang phía dưới */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-quantix-border text-sm text-quantix-text">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-5 sm:gap-6 pt-6 sm:pt-8 border-t border-quantix-border text-xs sm:text-sm text-quantix-text text-center md:text-left">
                     
                     {/* Copyright */}
                     <p className="footer-copy">
                         Copyright &copy; 2026 Quantix. Design: <a href="https://templatemo.com" target="_blank" rel="nofollow" className="text-quantix-accent hover:text-red-400 transition-colors">TemplateMo</a>
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-6">
+                    <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                         
                         {/* Nhóm icon mạng xã hội */}
                         <div className="flex items-center gap-4">
