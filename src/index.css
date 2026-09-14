@@ -1,32 +1,182 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+:root {
+  --deep-space: #1E1E24;
+  --surface-1: #26262D;
+  --surface-2: #2E2E36;
+  --surface-3: #36363F;
+  --accent: #FF6B6B;
+  --accent-light: #FF9B9B;
+  --accent-glow: rgba(255, 107, 107, 0.35);
+  --accent-soft: rgba(255, 107, 107, 0.08);
+  --accent-border: rgba(255, 107, 107, 0.25);
+  --text-primary: #EEEEF0;
+  --text-secondary: #8A8B9E;
+  --text-muted: #55566A;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --green: #22C55E;
+  --amber: #F59E0B;
+  --rose: #F43F5E;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+  --radius-pill: 100px;
+}
+
 @theme {
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
+  /* Legacy theme variables - do not remove until fully refactored */
   --color-quantix-dark: #1E1E24;
   --color-quantix-card: #26262D;
   --color-quantix-border: #36363F;
   --color-quantix-light: #ffffff;
-  --color-quantix-text: #a1a1aa; /* zinc-400 equivalent for standard text */
+  --color-quantix-text: #a1a1aa;
   --color-quantix-accent: #ff6b6b;
   --color-quantix-amber: #f59e0b;
   --color-quantix-green: #10b981;
-
 }
 
-
-
 @layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
   }
+  
   body {
-    @apply bg-quantix-dark text-quantix-text antialiased font-sans overflow-x-clip;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    background-color: var(--deep-space);
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-quantix-light font-semibold;
+    color: var(--text-primary);
+    font-weight: 600;
   }
+}
+
+/* 3. Phần Navbar: chỉ giữ lại các thuộc tính vị trí */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.4s ease;
+  background-color: rgba(30, 30, 36, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* 4. Phần Container: chỉ giữ lại layout căn chỉnh */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 5. Navbar Components */
+.navbar-logo-icon {
+  background-color: rgb(255, 107, 107);
+  box-shadow: 0px 0px 24px 0px rgba(255, 107, 107, 0.35);
+}
+
+.navbar-login-btn {
+  color: rgb(138, 139, 158);
+}
+.navbar-login-btn:hover {
+  color: var(--text-primary);
+}
+
+.navbar-btn-start {
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-radius: var(--radius-pill);
+}
+
+/* 6. Hero Section */
+.hero-badge {
+  background-color: rgba(255, 107, 107, 0.08);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  border-bottom-color: rgba(255, 107, 107, 0.2);
+  border-left-color: rgba(255, 107, 107, 0.2);
+  border-right-color: rgba(255, 107, 107, 0.2);
+  border-top-color: rgba(255, 107, 107, 0.2);
+  color: rgb(255, 155, 155);
+}
+
+.hero-gradient-text {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(135deg, rgb(255, 212, 212) 0%, rgb(255, 107, 107) 60%, rgb(255, 155, 155) 100%);
+  color: rgb(238, 238, 240);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.hero-btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.hero-btn-primary:hover {
+  background-color: var(--accent-light);
+}
+
+.hero-btn-secondary {
+  background-color: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: var(--radius-pill);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.hero-btn-secondary:hover {
+  background-color: var(--surface-2);
+}
+
+.hero-trusted-title {
+  color: rgb(85, 86, 106);
+}
+
+.hero-trusted-item {
+  color: rgb(138, 139, 158);
+}
+
+.hero-trusted-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.hero-bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.hero-radial-glow {
+  background-color: rgba(255, 107, 107, 0.1);
+  filter: blur(80px);
+  border-radius: 9999px;
+  pointer-events: none;
 }
