@@ -180,3 +180,60 @@
   border-radius: 9999px;
   pointer-events: none;
 }
+
+/* 7. Feature Showcase Mockup & Tab Transition */
+.mockup-outer {
+  background-color: rgb(46, 46, 54);
+  border-color: rgba(255, 255, 255, 0.06);
+  color: rgb(238, 238, 240);
+}
+
+.mockup-inner {
+  background-color: rgb(46, 46, 54);
+  border-color: rgba(255, 255, 255, 0.06);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.mockup-header {
+  background-color: rgb(46, 46, 54);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-fade-in {
+  animation: tabFadeIn 0.2s ease-out forwards;
+}
+
+/* 8. Stats Section */
+.stats-section {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 80px 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--deep-space);
+}
+
+.stats-container {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
