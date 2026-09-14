@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
-import FadeUp from "./FadeUp";
 
 function Pricing({ plans }) {
     const [isAnnual, setIsAnnual] = useState(false);
@@ -9,7 +8,7 @@ function Pricing({ plans }) {
         <section className="py-20 bg-quantix-dark scroll-mt-20 sm:scroll-mt-24" id="pricing">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <FadeUp className="text-center mb-10 md:mb-16">
+                <div data-aos="fade-up" className="text-center mb-10 md:mb-16">
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <span className="w-8 h-[2px] bg-quantix-accent"></span>
                         <span className="text-quantix-accent text-sm font-bold tracking-widest uppercase">Pricing</span>
@@ -20,10 +19,10 @@ function Pricing({ plans }) {
                     <p className="text-lg text-quantix-text max-w-2xl mx-auto">
                         No credit card required. Upgrade, downgrade, or cancel anytime.
                     </p>
-                </FadeUp>
+                </div>
 
                 {/* Toggle */}
-                <FadeUp delay={100} className="flex items-center justify-center gap-4 mb-10 md:mb-16">
+                <div data-aos="fade-up" data-aos-delay="100" className="flex items-center justify-center gap-4 mb-10 md:mb-16">
                     <span className={`font-medium transition-colors ${!isAnnual ? 'text-quantix-light' : 'text-quantix-text'}`}>
                         Monthly
                     </span>
@@ -41,13 +40,13 @@ function Pricing({ plans }) {
                     <span className="bg-[#22c55e]/10 text-[#22c55e] text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider">
                         Save 30%
                     </span>
-                </FadeUp>
+                </div>
 
                 {/* Pricing Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto items-stretch">
                     {plans.map((plan, index) => {
                         return (
-                            <FadeUp key={plan.name} delay={200 + index * 100} className="h-full">
+                            <div key={plan.name} data-aos="fade-up" data-aos-delay={200 + index * 100} className="h-full">
                                 <div
                                     className={`relative rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
                                         plan.popular
@@ -121,7 +120,7 @@ function Pricing({ plans }) {
                                         ))}
                                     </ul>
                                 </div>
-                            </FadeUp>
+                            </div>
                         );
                     })}
                 </div>

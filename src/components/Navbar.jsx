@@ -66,7 +66,7 @@ function Navbar() {
 
       {/* Mobile Menu Slide-out */}
       <div
-        className={`md:hidden fixed top-16 right-0 w-3/4 max-w-xs h-[calc(100vh-4rem)] bg-quantix-dark/95 backdrop-blur-xl border-l border-quantix-border shadow-2xl transition-all duration-300 ease-in-out z-50 ${
+        className={`md:hidden fixed top-16 right-0 w-3/4 max-w-xs h-[calc(100vh-4rem)] bg-quantix-dark border-l border-quantix-border shadow-2xl transition-all duration-300 ease-in-out z-50 ${
           isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
         }`}
       >

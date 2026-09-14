@@ -1,5 +1,4 @@
 import { ArrowRight, Play, TrendingUp, TrendingDown } from 'lucide-react'
-import FadeUp from './FadeUp'
 
 function Hero() {
     return (
@@ -9,29 +8,29 @@ function Hero() {
 
                     {/* Left Content */}
                     <div className="mb-12 lg:mb-0 order-1 lg:col-start-1 lg:row-start-1">
-                        <FadeUp delay={100}>
+                        <div data-aos="fade-up" data-aos-delay="100">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-quantix-border/50 border border-quantix-border mb-6">
                                 <span className="w-2 h-2 rounded-full bg-quantix-green animate-pulse"></span>
                                 <span className="text-sm font-medium text-quantix-text">Version 2.0 is Live</span>
                             </div>
-                        </FadeUp>
+                        </div>
 
-                        <FadeUp delay={200}>
+                        <div data-aos="fade-up" data-aos-delay="200">
                             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
                                 Analytics that<br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-quantix-accent to-orange-400">
                                     move the needle
                                 </span>
                             </h1>
-                        </FadeUp>
+                        </div>
 
-                        <FadeUp delay={300}>
+                        <div data-aos="fade-up" data-aos-delay="300">
                             <p className="text-lg text-quantix-text mb-8 max-w-xl">
                                 Ship faster with real-time product analytics, session replay, and feature flags — all in one platform built for engineering teams.
                             </p>
-                        </FadeUp>
+                        </div>
 
-                        <FadeUp delay={400}>
+                        <div data-aos="fade-up" data-aos-delay="400">
                             <div className="flex flex-col sm:flex-row gap-4 mb-12 lg:mb-0">
                                 <a href="#" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-quantix-accent text-white font-medium hover:bg-red-500 transition-colors">
                                     Get Started Free <ArrowRight className="ml-2 w-4 h-4" />
@@ -41,11 +40,11 @@ function Hero() {
                                     Watch Demo
                                 </a>
                             </div>
-                        </FadeUp>
+                        </div>
                     </div>
 
                     {/* Right Mockup */}
-                    <FadeUp delay={300} className="relative mt-8 lg:mt-0 order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 w-full">
+                    <div data-aos="fade-up" data-aos-delay="300" className="relative mt-8 lg:mt-0 order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 w-full">
                         <div className="relative rounded-xl border border-quantix-border bg-quantix-card shadow-2xl overflow-hidden">
                             {/* Toolbar */}
                             <div className="flex items-center gap-2 px-4 py-3 border-b border-quantix-border bg-quantix-dark/50">
@@ -113,10 +112,10 @@ function Hero() {
 
                         {/* Decorative Glow */}
                         <div className="absolute -inset-0.5 bg-gradient-to-tr from-quantix-accent/20 to-orange-400/20 blur-3xl -z-10 rounded-full opacity-50"></div>
-                    </FadeUp>
+                    </div>
 
                     {/* Trusted By */}
-                    <FadeUp delay={500} className="w-full order-3 lg:col-start-1 lg:row-start-2 border-t border-quantix-border pt-8 mt-8 lg:pt-6 lg:mt-0">
+                    <div data-aos="fade-up" data-aos-delay="500" className="w-full order-3 lg:col-start-1 lg:row-start-2 border-t border-quantix-border pt-8 mt-8 lg:pt-6 lg:mt-0">
                         <p className="text-sm text-quantix-text mb-4 text-center sm:text-left">Trusted by 2,400+ teams</p>
                         <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-4 opacity-70 grayscale">
                             <div className="flex items-center font-bold text-lg">▲ Vercel</div>
@@ -125,7 +124,7 @@ function Hero() {
                             <div className="flex items-center font-bold text-lg">Resend</div>
                             <div className="flex items-center font-bold text-lg">Supabase</div>
                         </div>
-                    </FadeUp>
+                    </div>
 
                 </div>
             </div>

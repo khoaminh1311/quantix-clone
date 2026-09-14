@@ -7,7 +7,7 @@ function FeatureShowcase({ activeTab }) {
         switch (activeTab) {
             case 'dashboard':
                 return (
-                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up">
+                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up" data-aos="fade-up">
                         <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8">
                             <div className="p-2.5 sm:p-4 rounded-lg bg-quantix-card border border-quantix-border/50 min-w-0">
                                 <div className="text-[9px] sm:text-xs text-quantix-text mb-0.5 sm:mb-1 uppercase tracking-wider font-semibold truncate">Active Users</div>
@@ -47,7 +47,7 @@ function FeatureShowcase({ activeTab }) {
                 );
             case 'funnels':
                 return (
-                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up">
+                    <div className="p-3 sm:p-5 lg:p-8 animate-fade-in-up" data-aos="fade-up">
                         <div className="space-y-4">
                             {[
                                 { step: 'Landing Page', users: '12,480', fill: '100%', drop: '—', color: 'bg-quantix-accent' },
