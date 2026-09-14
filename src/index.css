@@ -237,3 +237,46 @@
   margin: 0 auto;
   padding: 0 24px;
 }
+
+/* 9. Footer Section */
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 0;
+  margin: 0;
+  background-color: var(--deep-space);
+}
+
+.footer .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: block;
+}
+
+.footer-row-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.footer-row-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 0 28px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-row-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+}
