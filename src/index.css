@@ -78,15 +78,33 @@
   border-bottom: 1px solid var(--border-subtle);
 }
 
-/* 4. Phần Container: chỉ giữ lại layout căn chỉnh */
+/* 4. Phần Container: layout căn chỉnh với padding ngang thoải mái */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (min-width: 400px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 56px;
+  }
 }
 
 /* 5. Navbar Components */
@@ -202,14 +220,25 @@
 @keyframes tabFadeIn {
   from {
     opacity: 0;
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .tab-fade-in {
-  animation: tabFadeIn 0.2s ease-out forwards;
+  animation: tabFadeIn 0.25s ease-out forwards;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* 8. Stats Section */
@@ -235,7 +264,25 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
+}
+
+@media (min-width: 400px) {
+  .stats-container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 640px) {
+  .stats-container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-container {
+    padding: 0 56px;
+  }
 }
 
 /* 9. Footer Section */
@@ -247,10 +294,6 @@
 }
 
 .footer .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: block;
 }
 

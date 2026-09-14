@@ -56,7 +56,7 @@ function Navbar() {
       {/* Mobile Menu Backdrop */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 top-[72px] bg-black/60 backdrop-blur-sm z-40 md:hidden"
+          className="fixed inset-0 top-[72px] bg-black/40 backdrop-blur-sm z-40 md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-hidden="true"
         />
@@ -64,7 +64,7 @@ function Navbar() {
 
       {/* Mobile Menu Slide-out */}
       <div
-        className={`md:hidden fixed top-[72px] right-0 w-3/4 max-w-xs h-[calc(100vh-72px)] bg-[var(--surface-1)] border-l border-[var(--border-subtle)] shadow-2xl transition-all duration-300 ease-in-out z-50 ${
+        className={`md:hidden fixed top-[72px] right-0 w-3/4 max-w-xs h-[calc(100vh-72px)] bg-[#26262D]/75 backdrop-blur-xl border-l border-white/[0.08] shadow-2xl transition-all duration-300 ease-in-out z-50 ${
           isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
         }`}
       >

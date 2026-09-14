@@ -21,7 +21,7 @@ function CTA() {
             />
 
             {/* Container */}
-            <div className="w-full max-w-[1200px] mx-auto px-6 text-center relative z-10">
+            <div className="w-full max-w-[1200px] mx-auto px-4 min-[400px]:px-6 sm:px-10 lg:px-16 text-center relative z-10">
                 {/* Inner */}
                 <div data-aos="fade-up" className="relative z-10 max-w-[520px] mx-auto p-0">
                     <h2 className="mb-3 p-0 text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-primary)]">
@@ -44,7 +44,7 @@ function CTA() {
                             autoComplete="email"
                             placeholder="you@company.com"
                             required
-                            className="flex-1 bg-transparent pl-4 pr-2 py-2 text-sm sm:text-[15px] text-[var(--text-primary)] placeholder-[rgb(138,139,158)] focus:outline-none"
+                            className="flex-1 bg-transparent pl-4 pr-2 py-2 text-sm sm:text-[15px] min-w-0 text-[var(--text-primary)] placeholder-[rgb(138,139,158)] focus:outline-none"
                         />
                         <button
                             type="submit"

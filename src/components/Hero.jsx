@@ -25,7 +25,7 @@ function Hero() {
                 aria-hidden="true"
             />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 min-[400px]:px-6 sm:px-10 lg:px-16">
                 <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-16 items-center">
 
                     {/* Left Content */}
@@ -95,7 +95,7 @@ function Hero() {
                     </div>
 
                     {/* Right Mockup */}
-                    <div data-aos="fade-up" data-aos-delay="300" className="relative mt-8 lg:mt-0 order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 w-full">
+                    <div data-aos="fade-up" data-aos-delay="300" className="relative mt-8 lg:mt-0 order-3 lg:order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 w-full">
                         <div className="relative rounded-2xl sm:rounded-3xl border border-white/[0.06] bg-[#26262D] shadow-2xl p-4 sm:p-6 overflow-hidden">
                             {/* Toolbar */}
                             <div className="flex items-center gap-2 mb-4 sm:mb-6">
@@ -106,25 +106,25 @@ function Hero() {
 
                             {/* Mockup Body */}
                             <div>
-                                <div className="grid grid-cols-3 gap-2.5 sm:gap-4 mb-4 sm:mb-6">
-                                    <div className="p-3.5 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
-                                        <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">PAGE VIEWS</div>
-                                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white mb-1 truncate">24.8K</div>
-                                        <div className="text-[11px] sm:text-sm font-medium text-[#22C55E]">
+                                <div className="grid grid-cols-3 gap-1.5 min-[400px]:gap-2.5 sm:gap-4 mb-4 sm:mb-6">
+                                    <div className="p-2 min-[400px]:p-3 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
+                                        <div className="text-[9px] min-[400px]:text-[10px] sm:text-xs font-semibold uppercase tracking-tight min-[400px]:tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">PAGE VIEWS</div>
+                                        <div className="text-base min-[400px]:text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">24.8K</div>
+                                        <div className="text-[10px] min-[400px]:text-[11px] sm:text-sm font-medium text-[#22C55E]">
                                             +12.3%
                                         </div>
                                     </div>
-                                    <div className="p-3.5 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
-                                        <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">CONVERSIONS</div>
-                                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white mb-1 truncate">1,847</div>
-                                        <div className="text-[11px] sm:text-sm font-medium text-[#22C55E]">
+                                    <div className="p-2 min-[400px]:p-3 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
+                                        <div className="text-[9px] min-[400px]:text-[10px] sm:text-xs font-semibold uppercase tracking-tight min-[400px]:tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">CONVERSIONS</div>
+                                        <div className="text-base min-[400px]:text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">1,847</div>
+                                        <div className="text-[10px] min-[400px]:text-[11px] sm:text-sm font-medium text-[#22C55E]">
                                             +8.1%
                                         </div>
                                     </div>
-                                    <div className="p-3.5 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
-                                        <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">BOUNCE RATE</div>
-                                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white mb-1 truncate">32%</div>
-                                        <div className="text-[11px] sm:text-sm font-medium text-[#22C55E]">
+                                    <div className="p-2 min-[400px]:p-3 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
+                                        <div className="text-[9px] min-[400px]:text-[10px] sm:text-xs font-semibold uppercase tracking-tight min-[400px]:tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">BOUNCE RATE</div>
+                                        <div className="text-base min-[400px]:text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">32%</div>
+                                        <div className="text-[10px] min-[400px]:text-[11px] sm:text-sm font-medium text-[#22C55E]">
                                             -4.2%
                                         </div>
                                     </div>
@@ -163,31 +163,31 @@ function Hero() {
                     </div>
 
                     {/* Trusted By */}
-                    <div data-aos="fade-up" data-aos-delay="500" className="w-full order-3 lg:col-start-1 lg:row-start-2 border-t border-[var(--border-subtle)] pt-8 mt-8 lg:pt-6 lg:mt-0">
+                    <div data-aos="fade-up" data-aos-delay="500" className="w-full order-2 lg:order-3 lg:col-start-1 lg:row-start-2 border-t border-[var(--border-subtle)] pt-8 mt-8 lg:pt-6 lg:mt-0">
                         <p
                             className="hero-trusted-title text-xs font-semibold uppercase tracking-wider mb-4 text-center sm:text-left"
                             style={{ color: 'rgb(85, 86, 106)' }}
                         >
                             TRUSTED BY 2,400+ TEAMS
                         </p>
-                        <div className="flex flex-wrap justify-center sm:justify-start gap-x-6 sm:gap-x-8 gap-y-4">
-                            <div className="hero-trusted-item flex items-center gap-2 text-sm sm:text-base font-semibold" style={{ color: 'rgb(138, 139, 158)' }}>
+                        <div className="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between lg:justify-start gap-x-4 sm:gap-x-5 lg:gap-x-3.5 xl:gap-x-6 gap-y-3">
+                            <div className="hero-trusted-item flex items-center gap-2 text-xs sm:text-sm font-semibold shrink-0" style={{ color: 'rgb(138, 139, 158)' }}>
                                 <span className="hero-trusted-icon w-[18px] h-[18px] rounded-[4px] bg-white/[0.06] border border-white/[0.04] inline-block shrink-0" aria-hidden="true" />
                                 <span>Vercel</span>
                             </div>
-                            <div className="hero-trusted-item flex items-center gap-2 text-sm sm:text-base font-semibold" style={{ color: 'rgb(138, 139, 158)' }}>
+                            <div className="hero-trusted-item flex items-center gap-2 text-xs sm:text-sm font-semibold shrink-0" style={{ color: 'rgb(138, 139, 158)' }}>
                                 <span className="hero-trusted-icon w-[18px] h-[18px] rounded-[4px] bg-white/[0.06] border border-white/[0.04] inline-block shrink-0" aria-hidden="true" />
                                 <span>Linear</span>
                             </div>
-                            <div className="hero-trusted-item flex items-center gap-2 text-sm sm:text-base font-semibold" style={{ color: 'rgb(138, 139, 158)' }}>
+                            <div className="hero-trusted-item flex items-center gap-2 text-xs sm:text-sm font-semibold shrink-0" style={{ color: 'rgb(138, 139, 158)' }}>
                                 <span className="hero-trusted-icon w-[18px] h-[18px] rounded-[4px] bg-white/[0.06] border border-white/[0.04] inline-block shrink-0" aria-hidden="true" />
                                 <span>Raycast</span>
                             </div>
-                            <div className="hero-trusted-item flex items-center gap-2 text-sm sm:text-base font-semibold" style={{ color: 'rgb(138, 139, 158)' }}>
+                            <div className="hero-trusted-item flex items-center gap-2 text-xs sm:text-sm font-semibold shrink-0" style={{ color: 'rgb(138, 139, 158)' }}>
                                 <span className="hero-trusted-icon w-[18px] h-[18px] rounded-[4px] bg-white/[0.06] border border-white/[0.04] inline-block shrink-0" aria-hidden="true" />
                                 <span>Resend</span>
                             </div>
-                            <div className="hero-trusted-item flex items-center gap-2 text-sm sm:text-base font-semibold" style={{ color: 'rgb(138, 139, 158)' }}>
+                            <div className="hero-trusted-item flex items-center gap-2 text-xs sm:text-sm font-semibold shrink-0" style={{ color: 'rgb(138, 139, 158)' }}>
                                 <span className="hero-trusted-icon w-[18px] h-[18px] rounded-[4px] bg-white/[0.06] border border-white/[0.04] inline-block shrink-0" aria-hidden="true" />
                                 <span>Supabase</span>
                             </div>

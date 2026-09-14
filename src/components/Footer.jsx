@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer className="footer bg-[var(--deep-space)]">
-            <div className="container max-w-[1200px] mx-auto px-6">
+            <div className="container max-w-[1200px] mx-auto">
                 
                 {/* Hàng chứa danh sách liên kết */}
                 <div className="footer-row-links text-sm font-medium text-[var(--text-secondary)]">
