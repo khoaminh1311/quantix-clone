@@ -6,7 +6,7 @@ function Pricing({ plans }) {
 
     return (
         <section className="py-20 bg-quantix-dark scroll-mt-20 sm:scroll-mt-24" id="pricing">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 min-[400px]:px-6 sm:px-10 lg:px-16">
                 {/* Header */}
                 <div data-aos="fade-up" className="text-center mb-10 md:mb-16">
                     <div className="flex items-center justify-center gap-3 mb-4">

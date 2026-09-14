@@ -7,39 +7,39 @@ function FeatureShowcase({ activeTab }) {
         switch (activeTab) {
             case 'dashboard':
                 return (
-                    <div className="p-3 sm:p-5 lg:p-6 animate-fade-in-up">
+                    <div className="p-2.5 min-[400px]:p-3 sm:p-5 lg:p-6 animate-fade-in-up">
                         {/* 3 Top Metric Cards */}
-                        <div className="grid grid-cols-3 gap-2.5 sm:gap-4 mb-4 sm:mb-6">
-                            <div className="p-3 sm:p-4 rounded-xl bg-[rgb(46,46,54)] border border-[rgba(255,255,255,0.06)] min-w-0">
-                                <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[rgb(138,139,158)] mb-1 truncate">
+                        <div className="grid grid-cols-3 gap-1.5 min-[400px]:gap-2.5 sm:gap-4 mb-4 sm:mb-6">
+                            <div className="p-2 min-[400px]:p-3 sm:p-4 rounded-xl bg-[rgb(46,46,54)] border border-[rgba(255,255,255,0.06)] min-w-0">
+                                <div className="text-[9px] min-[400px]:text-[10px] sm:text-xs font-semibold uppercase tracking-tight min-[400px]:tracking-wider text-[rgb(138,139,158)] mb-1 truncate">
                                     Active Users
                                 </div>
-                                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">
+                                <div className="text-base min-[400px]:text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">
                                     3,842
                                 </div>
-                                <div className="text-[11px] sm:text-xs text-[#22C55E] font-medium">
+                                <div className="text-[10px] min-[400px]:text-[11px] sm:text-xs text-[#22C55E] font-medium">
                                     +12.3%
                                 </div>
                             </div>
-                            <div className="p-3 sm:p-4 rounded-xl bg-[rgb(46,46,54)] border border-[rgba(255,255,255,0.06)] min-w-0">
-                                <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[rgb(138,139,158)] mb-1 truncate">
+                            <div className="p-2 min-[400px]:p-3 sm:p-4 rounded-xl bg-[rgb(46,46,54)] border border-[rgba(255,255,255,0.06)] min-w-0">
+                                <div className="text-[9px] min-[400px]:text-[10px] sm:text-xs font-semibold uppercase tracking-tight min-[400px]:tracking-wider text-[rgb(138,139,158)] mb-1 truncate">
                                     Conversion
                                 </div>
-                                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">
+                                <div className="text-base min-[400px]:text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">
                                     12.4%
                                 </div>
-                                <div className="text-[11px] sm:text-xs text-[#22C55E] font-medium">
+                                <div className="text-[10px] min-[400px]:text-[11px] sm:text-xs text-[#22C55E] font-medium">
                                     +2.1%
                                 </div>
                             </div>
-                            <div className="p-3 sm:p-4 rounded-xl bg-[rgb(46,46,54)] border border-[rgba(255,255,255,0.06)] min-w-0">
-                                <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[rgb(138,139,158)] mb-1 truncate">
+                            <div className="p-2 min-[400px]:p-3 sm:p-4 rounded-xl bg-[rgb(46,46,54)] border border-[rgba(255,255,255,0.06)] min-w-0">
+                                <div className="text-[9px] min-[400px]:text-[10px] sm:text-xs font-semibold uppercase tracking-tight min-[400px]:tracking-wider text-[rgb(138,139,158)] mb-1 truncate">
                                     Churn
                                 </div>
-                                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">
+                                <div className="text-base min-[400px]:text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1 truncate">
                                     1.8%
                                 </div>
-                                <div className="text-[11px] sm:text-xs text-[#FF6B6B] font-medium">
+                                <div className="text-[10px] min-[400px]:text-[11px] sm:text-xs text-[#FF6B6B] font-medium">
                                     -0.4%
                                 </div>
                             </div>
@@ -282,7 +282,7 @@ function FeatureShowcase({ activeTab }) {
                 </div>
 
                 {/* Dynamic Content */}
-                <div key={activeTab} data-aos="fade" data-aos-duration="200" className="flex-1 tab-fade-in">
+                <div key={activeTab} className="flex-1 tab-fade-in">
                     {renderContent()}
                 </div>
             </div>

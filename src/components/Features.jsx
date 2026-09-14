@@ -69,14 +69,18 @@ function Features() {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            AOS.refresh();
+            if (typeof AOS.refreshHard === 'function') {
+                AOS.refreshHard();
+            } else {
+                AOS.refresh();
+            }
         }, 30);
         return () => clearTimeout(timer);
     }, [activeTab]);
 
     return (
         <section className="pt-8 sm:pt-12 pb-20 sm:pb-24 bg-[var(--deep-space)] scroll-mt-20 sm:scroll-mt-24" id="features">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 min-[400px]:px-6 sm:px-10 lg:px-16">
                 
                 {/* Header */}
                 <div data-aos="fade-up" className="text-center mb-10 sm:mb-14">
@@ -94,7 +98,7 @@ function Features() {
 
                 {/* Top Tabs Navigation (Floating Pill-shaped Dock) */}
                 <div data-aos="fade-up" data-aos-delay="100" className="flex justify-center mb-12 sm:mb-16">
-                    <div className="inline-flex items-center gap-1 p-1.5 rounded-full bg-[#26262D]/70 backdrop-blur-md border border-white/[0.06] max-w-full overflow-x-auto no-scrollbar shadow-xl">
+                    <div className="inline-flex items-center gap-1 p-1.5 rounded-full bg-[#26262D]/70 backdrop-blur-md border border-white/[0.06] max-w-full overflow-x-auto no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden shadow-xl">
                         {tabs.map(tab => {
                             const isActive = activeTab === tab.id;
                             return (
@@ -114,14 +118,12 @@ function Features() {
                     </div>
                 </div>
 
-                {/* Bottom Left Content & Bottom Right Mockup */}
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                {/* Bottom Left Content & Bottom Right Mockup - Appearing together synchronously */}
+                <div data-aos="fade-up" data-aos-delay="200" className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                     
                     {/* Bottom Left: Tab Content */}
                     <div 
                         key={`content-${activeTab}`} 
-                        data-aos="fade" 
-                        data-aos-duration="200" 
                         className="flex flex-col gap-6 tab-fade-in"
                     >
                         <div className="w-12 h-12 rounded-xl bg-[rgba(255,107,107,0.08)] border border-[rgba(255,107,107,0.2)] flex items-center justify-center text-[var(--accent)]">
