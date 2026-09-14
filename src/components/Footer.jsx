@@ -1,52 +1,60 @@
 function Footer() {
     return (
-        <footer className="border-t border-quantix-border bg-quantix-dark py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <footer className="footer bg-[var(--deep-space)]">
+            <div className="container max-w-[1200px] mx-auto px-6">
                 
-                {/* Hàng chứa các liên kết điều hướng */}
-                <div className="flex flex-wrap justify-center items-center gap-x-4 sm:gap-x-6 gap-y-2.5 mb-8 sm:mb-10 text-sm sm:text-base text-quantix-text">
-                    <a href="#features" className="hover:text-quantix-light transition-colors font-medium">Features</a>
-                    <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
-                    <a href="#pricing" className="hover:text-quantix-light transition-colors font-medium">Pricing</a>
-                    <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
-                    <a href="#" className="hover:text-quantix-light transition-colors font-medium" onClick={(e) => e.preventDefault()}>Documentation</a>
-                    <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
-                    <a href="#" className="hover:text-quantix-light transition-colors font-medium" onClick={(e) => e.preventDefault()}>Blog</a>
-                    <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-quantix-border"></span>
-                    <a href="#" className="hover:text-quantix-light transition-colors font-medium" onClick={(e) => e.preventDefault()}>Partners</a>
+                {/* Hàng chứa danh sách liên kết */}
+                <div className="footer-row-links text-sm font-medium text-[var(--text-secondary)]">
+                    <a href="#features" className="hover:text-[var(--text-primary)] transition-colors">Features</a>
+                    <span className="w-[3px] h-[3px] rounded-full bg-white/[0.12] shrink-0" />
+                    <a href="#pricing" className="hover:text-[var(--text-primary)] transition-colors">Pricing</a>
+                    <span className="w-[3px] h-[3px] rounded-full bg-white/[0.12] shrink-0" />
+                    <a href="#" className="hover:text-[var(--text-primary)] transition-colors" onClick={(e) => e.preventDefault()}>Documentation</a>
+                    <span className="w-[3px] h-[3px] rounded-full bg-white/[0.12] shrink-0" />
+                    <a href="#" className="hover:text-[var(--text-primary)] transition-colors" onClick={(e) => e.preventDefault()}>Blog</a>
+                    <span className="w-[3px] h-[3px] rounded-full bg-white/[0.12] shrink-0" />
+                    <a href="#" className="hover:text-[var(--text-primary)] transition-colors" onClick={(e) => e.preventDefault()}>Partners</a>
                 </div>
 
-                {/* Hàng chân trang phía dưới */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-5 sm:gap-6 pt-6 sm:pt-8 border-t border-quantix-border text-xs sm:text-sm text-quantix-text text-center md:text-left">
+                {/* Hàng bản quyền / thông tin dưới cùng */}
+                <div className="footer-row-bottom text-xs sm:text-sm text-[var(--text-secondary)]">
                     
                     {/* Copyright */}
-                    <p className="footer-copy">
-                        Copyright &copy; 2026 Quantix. Design: <a href="https://templatemo.com" target="_blank" rel="nofollow" className="text-quantix-accent hover:text-red-400 transition-colors">TemplateMo</a>
+                    <p>
+                        Copyright &copy; 2026 Quantix. Design: <a href="https://templatemo.com" target="_blank" rel="nofollow" className="text-[var(--accent)] hover:text-[var(--accent-light)] transition-colors">TemplateMo</a>
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-                        
+                    <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                         {/* Nhóm icon mạng xã hội */}
-                        <div className="flex items-center gap-4">
-                            <a href="#" className="hover:text-quantix-light transition-colors" aria-label="Twitter">
-                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        <div className="flex items-center gap-4 text-[var(--text-secondary)]">
+                            {/* X (formerly Twitter) */}
+                            <a href="#" className="hover:text-[var(--text-primary)] transition-colors" aria-label="X (Twitter)">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
                             </a>
-                            <a href="#" className="hover:text-quantix-light transition-colors" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            {/* GitHub */}
+                            <a href="#" className="hover:text-[var(--text-primary)] transition-colors" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg>
                             </a>
-                            <a href="#" className="hover:text-quantix-light transition-colors" aria-label="LinkedIn">
-                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            {/* LinkedIn */}
+                            <a href="#" className="hover:text-[var(--text-primary)] transition-colors" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
                             </a>
                         </div>
 
                         {/* Dấu phân cách */}
-                        <span className="hidden sm:block w-px h-4 bg-quantix-border"></span>
+                        <span className="w-px h-4 bg-[var(--border-subtle)]"></span>
 
                         {/* Nhóm liên kết pháp lý */}
                         <div className="flex items-center gap-4">
-                            <a href="#" className="hover:text-quantix-light transition-colors">Privacy</a>
-                            <span className="w-1 h-1 rounded-full bg-quantix-border"></span>
-                            <a href="#" className="hover:text-quantix-light transition-colors">Terms</a>
+                            <a href="#" className="hover:text-[var(--text-primary)] transition-colors" onClick={(e) => e.preventDefault()}>Privacy</a>
+                            <span className="w-1 h-1 rounded-full bg-[var(--border-subtle)]"></span>
+                            <a href="#" className="hover:text-[var(--text-primary)] transition-colors" onClick={(e) => e.preventDefault()}>Terms</a>
                         </div>
                     </div>
                 </div>
