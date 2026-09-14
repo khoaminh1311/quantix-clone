@@ -1,8 +1,8 @@
-import { ArrowRight, Play, TrendingUp, TrendingDown } from 'lucide-react'
+import { ArrowRight, Play } from 'lucide-react'
 
 function Hero() {
     return (
-        <section className="relative pt-20 sm:pt-24 pb-8 sm:pb-12 overflow-hidden">
+        <section className="relative pt-36 sm:pt-40 lg:pt-44 pb-8 sm:pb-12 overflow-hidden">
             {/* Lưới kẻ ô vuông mờ (SVG overlay stroke-white/[0.04]) */}
             <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
                 <svg
@@ -96,46 +96,43 @@ function Hero() {
 
                     {/* Right Mockup */}
                     <div data-aos="fade-up" data-aos-delay="300" className="relative mt-8 lg:mt-0 order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 w-full">
-                        <div className="relative rounded-xl border border-quantix-border bg-quantix-card shadow-2xl overflow-hidden">
+                        <div className="relative rounded-2xl sm:rounded-3xl border border-white/[0.06] bg-[#26262D] shadow-2xl p-4 sm:p-6 overflow-hidden">
                             {/* Toolbar */}
-                            <div className="flex items-center gap-2 px-4 py-3 border-b border-quantix-border bg-quantix-dark/50">
-                                <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                                <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                                <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                            <div className="flex items-center gap-2 mb-4 sm:mb-6">
+                                <div className="w-3 h-3 rounded-full bg-[#F43F5E]"></div>
+                                <div className="w-3 h-3 rounded-full bg-[#F59E0B]"></div>
+                                <div className="w-3 h-3 rounded-full bg-[#22C55E]"></div>
                             </div>
 
                             {/* Mockup Body */}
-                            <div className="p-3 sm:p-6">
-                                <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8">
-                                    <div className="p-2.5 sm:p-4 rounded-lg bg-quantix-dark border border-quantix-border min-w-0">
-                                        <div className="text-[10px] sm:text-xs text-quantix-text mb-0.5 sm:mb-1 truncate">Page Views</div>
-                                        <div className="text-sm sm:text-2xl font-bold text-quantix-light truncate">24.8K</div>
-                                        <div className="flex items-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs text-quantix-green mt-0.5 sm:mt-1">
-                                            <TrendingUp className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
-                                            <span>+12.3%</span>
+                            <div>
+                                <div className="grid grid-cols-3 gap-2.5 sm:gap-4 mb-4 sm:mb-6">
+                                    <div className="p-3.5 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
+                                        <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">PAGE VIEWS</div>
+                                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white mb-1 truncate">24.8K</div>
+                                        <div className="text-[11px] sm:text-sm font-medium text-[#22C55E]">
+                                            +12.3%
                                         </div>
                                     </div>
-                                    <div className="p-2.5 sm:p-4 rounded-lg bg-quantix-dark border border-quantix-border min-w-0">
-                                        <div className="text-[10px] sm:text-xs text-quantix-text mb-0.5 sm:mb-1 truncate">Conversions</div>
-                                        <div className="text-sm sm:text-2xl font-bold text-quantix-light truncate">1,847</div>
-                                        <div className="flex items-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs text-quantix-green mt-0.5 sm:mt-1">
-                                            <TrendingUp className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
-                                            <span>+8.1%</span>
+                                    <div className="p-3.5 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
+                                        <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">CONVERSIONS</div>
+                                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white mb-1 truncate">1,847</div>
+                                        <div className="text-[11px] sm:text-sm font-medium text-[#22C55E]">
+                                            +8.1%
                                         </div>
                                     </div>
-                                    <div className="p-2.5 sm:p-4 rounded-lg bg-quantix-dark border border-quantix-border min-w-0">
-                                        <div className="text-[10px] sm:text-xs text-quantix-text mb-0.5 sm:mb-1 truncate">Bounce Rate</div>
-                                        <div className="text-sm sm:text-2xl font-bold text-quantix-light truncate">32%</div>
-                                        <div className="flex items-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs text-red-400 mt-0.5 sm:mt-1">
-                                            <TrendingDown className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
-                                            <span>-4.2%</span>
+                                    <div className="p-3.5 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04] min-w-0">
+                                        <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#8A8B9E] mb-1 sm:mb-2 truncate">BOUNCE RATE</div>
+                                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white mb-1 truncate">32%</div>
+                                        <div className="text-[11px] sm:text-sm font-medium text-[#22C55E]">
+                                            -4.2%
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="p-4 rounded-lg bg-quantix-dark border border-quantix-border">
-                                    <div className="text-sm font-medium text-quantix-text mb-4">Traffic — Last 30 days</div>
-                                    <div className="h-32 relative">
+                                <div className="p-4 sm:p-5 rounded-xl bg-[#2E2E36] border border-white/[0.04]">
+                                    <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#8A8B9E] mb-4">TRAFFIC — LAST 30 DAYS</div>
+                                    <div className="h-28 sm:h-32 relative">
                                         <svg viewBox="0 0 300 80" preserveAspectRatio="none" className="w-full h-full">
                                             <defs>
                                                 <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
