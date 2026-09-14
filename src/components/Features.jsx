@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { LayoutDashboard, Filter, Code, PlayCircle, Shield, Check } from 'lucide-react';
 import FeatureShowcase from './FeatureShowcase';
-import FadeUp from './FadeUp';
 
 const tabs = [
     { 
@@ -55,7 +54,7 @@ function Features() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Header */}
-                <FadeUp className="text-center mb-10 sm:mb-14">
+                <div data-aos="fade-up" className="text-center mb-10 sm:mb-14">
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <span className="w-8 h-[2px] bg-quantix-accent"></span>
                         <span className="text-quantix-accent text-sm font-bold tracking-widest uppercase">Features</span>
@@ -66,10 +65,10 @@ function Features() {
                     <p className="text-lg text-quantix-text max-w-2xl mx-auto">
                         A complete analytics toolkit that replaces five tools in your stack.
                     </p>
-                </FadeUp>
+                </div>
 
                 {/* Top Tabs Navigation (Floating Pill-shaped) */}
-                <FadeUp delay={100} className="flex justify-center mb-12 sm:mb-16">
+                <div data-aos="fade-up" data-aos-delay="100" className="flex justify-center mb-12 sm:mb-16">
                     <div className="inline-flex items-center gap-0.5 sm:gap-1 p-1 sm:p-1.5 rounded-full bg-quantix-card/40 backdrop-blur-md border border-quantix-border/50 max-w-full overflow-x-auto no-scrollbar">
                         {tabs.map(tab => {
                             const isActive = activeTab === tab.id;
@@ -88,7 +87,7 @@ function Features() {
                             );
                         })}
                     </div>
-                </FadeUp>
+                </div>
 
                 {/* Bottom Left Content & Bottom Right Mockup */}
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">

@@ -1,5 +1,4 @@
 import { ArrowRight, Check } from 'lucide-react';
-import FadeUp from './FadeUp';
 
 function CTA() {
     return (
@@ -10,18 +9,18 @@ function CTA() {
                     {/* Removed Decorative Background Elements to match main background */}
 
                     <div className="relative z-10 max-w-3xl mx-auto">
-                        <FadeUp>
+                        <div data-aos="fade-up">
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-quantix-light mb-4 sm:mb-6 tracking-tight">
                                 Stay in the loop
                             </h2>
-                        </FadeUp>
-                        <FadeUp delay={100}>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="100">
                             <p className="text-base sm:text-lg text-quantix-text mb-8 sm:mb-10">
                                 Product updates, engineering insights, and zero spam. Unsubscribe anytime.
                             </p>
-                        </FadeUp>
+                        </div>
 
-                        <FadeUp delay={200}>
+                        <div data-aos="fade-up" data-aos-delay="200">
                             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-8" onSubmit={(e) => e.preventDefault()}>
                                 <label htmlFor="email" className="sr-only">Email address</label>
                                 <input
@@ -40,9 +39,9 @@ function CTA() {
                                     Subscribe <ArrowRight className="ml-2 w-4 h-4" />
                                 </button>
                             </form>
-                        </FadeUp>
+                        </div>
 
-                        <FadeUp delay={300}>
+                        <div data-aos="fade-up" data-aos-delay="300">
                             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-quantix-text">
                                 <div className="flex items-center gap-2">
                                     <Check className="w-4 h-4 text-quantix-accent" />
@@ -57,7 +56,7 @@ function CTA() {
                                     <span>Unsubscribe anytime</span>
                                 </div>
                             </div>
-                        </FadeUp>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,9 @@ import Stats from "./components/Stats"
 import Pricing from "./components/Pricing"
 import CTA from "./components/CTA"
 import Footer from "./components/Footer"
+import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const stats = [
     {
@@ -84,6 +87,14 @@ const plans = [
 ]
 
 function App() {
+    useEffect(() => {
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 700,
+            easing: 'ease-out'
+        });
+    }, []);
 
     return (
         <div className="overflow-x-clip w-full relative min-h-screen flex flex-col">
