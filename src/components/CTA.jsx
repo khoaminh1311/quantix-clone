@@ -1,61 +1,73 @@
-import { ArrowRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 function CTA() {
     return (
-        <section className="py-24 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="bg-quantix-dark border-0 rounded-3xl p-6 sm:p-8 lg:p-16 text-center relative overflow-hidden">
+        <section className="py-20 sm:py-24 relative overflow-hidden bg-[var(--deep-space)]" id="cta">
+            {/* 80px Grid Background */}
+            <div 
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                    backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px)',
+                    backgroundSize: '80px 80px'
+                }}
+            />
 
-                    {/* Removed Decorative Background Elements to match main background */}
+            {/* Red Radial Glow */}
+            <div 
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                    backgroundImage: 'radial-gradient(rgba(255, 107, 107, 0.06) 0%, rgba(0, 0, 0, 0) 60%)'
+                }}
+            />
 
-                    <div className="relative z-10 max-w-3xl mx-auto">
-                        <div data-aos="fade-up">
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-quantix-light mb-4 sm:mb-6 tracking-tight">
-                                Stay in the loop
-                            </h2>
+            {/* Container */}
+            <div className="w-full max-w-[1200px] mx-auto px-6 text-center relative z-10">
+                {/* Inner */}
+                <div data-aos="fade-up" className="relative z-10 max-w-[520px] mx-auto p-0">
+                    <h2 className="mb-3 p-0 text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-primary)]">
+                        Stay in the loop
+                    </h2>
+                    <p className="max-w-[380px] mx-auto mb-8 p-0 text-[15px] leading-[1.7] text-[var(--text-secondary)]">
+                        Product updates, engineering insights, and zero spam. Unsubscribe anytime.
+                    </p>
+
+                    {/* Input + Subscribe Button Pill Container */}
+                    <form 
+                        onSubmit={(e) => e.preventDefault()} 
+                        className="w-full max-w-[480px] mx-auto flex items-center p-1.5 rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[var(--surface-1)] transition-all focus-within:border-[var(--accent-border)] focus-within:shadow-[0_0_20px_rgba(255,107,107,0.15)] mb-8"
+                    >
+                        <label htmlFor="cta-email" className="sr-only">Email address</label>
+                        <input
+                            id="cta-email"
+                            name="email"
+                            type="email"
+                            autoComplete="email"
+                            placeholder="you@company.com"
+                            required
+                            className="flex-1 bg-transparent pl-4 pr-2 py-2 text-sm sm:text-[15px] text-[var(--text-primary)] placeholder-[rgb(138,139,158)] focus:outline-none"
+                        />
+                        <button
+                            type="submit"
+                            className="rounded-[10px] text-white font-semibold text-sm sm:text-[15px] px-6 sm:px-7 py-2.5 sm:py-3 transition-all cursor-pointer shrink-0 bg-[var(--accent)] hover:bg-[var(--accent-light)] shadow-[0_0_24px_rgba(255,107,107,0.35)] hover:shadow-[0_0_28px_rgba(255,107,107,0.5)] active:scale-[0.98]"
+                            style={{ borderRadius: '10px' }}
+                        >
+                            Subscribe
+                        </button>
+                    </form>
+
+                    {/* Trust Badges */}
+                    <div className="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-[var(--text-secondary)]">
+                        <div className="flex items-center gap-2">
+                            <Check className="w-4 h-4 text-[var(--accent)] stroke-[2.5]" />
+                            <span>6,200+ subscribers</span>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100">
-                            <p className="text-base sm:text-lg text-quantix-text mb-8 sm:mb-10">
-                                Product updates, engineering insights, and zero spam. Unsubscribe anytime.
-                            </p>
+                        <div className="flex items-center gap-2">
+                            <Check className="w-4 h-4 text-[var(--accent)] stroke-[2.5]" />
+                            <span>Monthly digest</span>
                         </div>
-
-                        <div data-aos="fade-up" data-aos-delay="200">
-                            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-8" onSubmit={(e) => e.preventDefault()}>
-                                <label htmlFor="email" className="sr-only">Email address</label>
-                                <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    autoComplete="email"
-                                    placeholder="you@company.com"
-                                    className="flex-1 bg-black/20 border border-quantix-border rounded-lg px-4 py-3 text-quantix-light placeholder-quantix-text/50 focus:outline-none focus:border-quantix-accent focus:ring-1 focus:ring-quantix-accent transition-all"
-                                    required
-                                />
-                                <button
-                                    type="submit"
-                                    className="inline-flex items-center justify-center px-6 py-3 bg-quantix-accent hover:bg-red-500 text-white font-medium rounded-lg transition-colors whitespace-nowrap"
-                                >
-                                    Subscribe <ArrowRight className="ml-2 w-4 h-4" />
-                                </button>
-                            </form>
-                        </div>
-
-                        <div data-aos="fade-up" data-aos-delay="300">
-                            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-quantix-text">
-                                <div className="flex items-center gap-2">
-                                    <Check className="w-4 h-4 text-quantix-accent" />
-                                    <span>6,200+ subscribers</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Check className="w-4 h-4 text-quantix-accent" />
-                                    <span>Monthly digest</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Check className="w-4 h-4 text-quantix-accent" />
-                                    <span>Unsubscribe anytime</span>
-                                </div>
-                            </div>
+                        <div className="flex items-center gap-2">
+                            <Check className="w-4 h-4 text-[var(--accent)] stroke-[2.5]" />
+                            <span>Unsubscribe anytime</span>
                         </div>
                     </div>
                 </div>
